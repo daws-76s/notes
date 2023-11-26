@@ -1,0 +1,290 @@
+Agenda
+-------------
+Previous Student Experience
+HR note
+
+Training Details
+
+What is DevOps?
+Why so much demand?
+
+Who can learn?
+	Selenium
+	Java
+	L2 support
+	Weblogic/middleware
+	sharepoint
+	backup/netapp
+	NON-IT --> IT --> more openings, valid degree
+		focus, interest, concept
+		8 hours --> remaining time practice
+	Career Gap
+		free ---> spend full time
+		
+everyone should upgrade in their career
+
+is coding required?
+	Programming
+		Java --> fast response, payments, session management
+		.Net
+		NodeJS
+		
+	Scripting
+		application installations
+		deploy
+		monitoring
+		
+variables
+data types
+conditions
+functions
+loops
+
+How much experience is covered?
+Placement assistance
+Certifications
+	AWS solutions architect associate
+	CKA
+	Terraform
+	DevOps certification --> No certification
+	AWS DevOps --> useless
+		Code commit
+		Code build
+		Code deploy
+	Azure DevOps --> Drag and drop
+		Azure Repos
+		Azure Pipelines
+		Azure tasks
+		
+Linux Servers --> EC2
+Azure --> VM
+
+QA
+
+DevOps = Dev+Ops
+Automatic deployments
+immidiate results
+CICD
+DevOps is a process and methodology
+
+
+faster releases, less defects --> 
+fast and accuracy
+
+SMS --> school management system
+---------------------------------
+follow best process, you will get best results
+process should be continously updated
+
+stakeholders
+-------------
+Students
+Parents
+Teachers
+
+Examination system --> Waterfall model
+------------------
+only one final exam
+if pass --> promoted
+if fail --> demoted
+
+Students/developers --> No
+Parents/customer --> they are not aware what teachers are teaching, how student is studying
+Teachers/Testing team --> No
+
+teachers --> they will start covering syllabus
+students --> prepare from one month
+
+less than 50%
+
+1 fullround test --> Ferrari --> ambassdor
+
+Unit tests and term exams/Agile
+------------------
+Unit test - I --> with in 1 month
+Unit test - II
+Quarterly
+Unit test - III
+Half yearly
+Final exam
+6 exams
+
+Students --> 1 week before starts preparation
+Parents --> happy he can see his kid is studying atleast in 1 month
+teachers --> now they are serious
+
+results --> analyze --> 60%
+II --> atleast 61% --> results --> analyze
+III --> 62%
+
+final exam --> 75%
+overall pass percentage --> 90%
+
+Slip/Daily Tests
+-----------------
+everyday exam --> 
+100 exams --> 
+99%
+
+more tests --> best results
+
+Redbus
+---------
+1000 --> 10,000
+10 
+a minor defect caused this
+4 times testing
+400 times testing -->
+
+User
+Products catalogue
+Order management
+Cart
+Payments
+Delivery
+
+User Module --> 1 month
+2 weeks/ 2 weeks testing and Deplpoyment
+--------------------
+Developers --> full stress --> 2 weeks
+
+Testing --> 2weeks
+-----------------
+100 defects --> 
+30 invalid defects --> 
+
+
+Customer 
+Deplpoyment/Ops team -->
+
+5 rounds of testing
+
+DevOps -->  
+-------------------
+Enter your email address
+
+deploy --> test
+
+test cases
+------------
+no special charecters
+no numbers
+50 charecters length
+
+2 defects
+
+2nd day
+------------
+2 defects
+1 invalid defect
+easy to fix
+
+4 weeks --> Software should be released asap with less defects
+-------------
+development, deployment, testing
+
+20 days of testing -->
+
+teacher --> teach
+manual --> question, conduct, results, analyze
+softwares --> pool of questions, online
+
+DevOps never talk about automation --> but it recommends to reduce manual errors and stress
+
+deployment, testing --> should be completely automation
+
+Dev
+------
+compile
+build
+unit test cases
+deployment
+functional testing --> include testing also
+
+Continous integration
+Continous deployment --> NON Prod
+Continous delivery --> Prod
+Continous testing
+
+DevOps
+----------------
+1. automatically deploy code in all environments
+2. monitoring
+
+Cloud --> By default
+----------------
+Space
+Power
+Network
+Resources
+
+DevOps is a process of developing, deploying and testing on the same day. For example if a developer develops 100 lines of code, we can deploy it and test in on the same day. We will get immidiate results, we can fix them. in this process developers, testing and operations guys are working together.
+
+as a devops I can concentrate on faster release with less defects.
+11sec --> 1 release --> DevOps
+
+DevOps with AWS
+---------------
+Linux Admin
+Project discussion
+	User
+	10 modules
+	VPN setup
+	DEV QA Prod
+	
+Manual installation --> complete manual process
+	FZ --> manual staring, auto start
+	Bike Mechanic --> Manual working, automatic ga
+shell script --> automation --> disadvantages
+Ansible --> automation --> disadvantages
+Terraform --> automation --> disadvantages
+Jenkins CICD VM --> automation --> disadvantages
+Docker and K8 --> automation
+ELK and prometheus
+AWS infra
+Python scripting
+
+Lifetime access to recordings
+lifetime access to slack and QA
+
+Practice
+----------
+Attend Live session --> 50%
+listen to recording --> write notes what you understood --> 60%
+hands-on practice --> refer notes and recording --> 70%
+hands-on practice --> open recording --> 80%
+
+Errors
+----------
+1. read error description -->  5min
+2. search google --> new things
+3. slack -->
+4. QA
+
+
+120hours --> 400 hours --> 3/4 years of minimum
+
+
+Placement assistance
+---------------------
+HR team --> Resume preparation, interview tips, mock interviews
+
+ideas
+-----
+everyday thursday evening --> interview QA discussion
+Friday --> 10 questions quiz
+github discussions --> Question and answer
+
+Resume preparation --> 
+
+Ramesh --> TCS
+Suresh --> CTS
+
+gramphone records --> mechanic
+tape records --> upgrade
+VCR --> upgrade
+DVD --> upgraded
+Mobiles --> stopped upgrading
+
+DevOps --> AiOps
+
