@@ -208,4 +208,6 @@ git bash
 ec2 t2-micro charges --> assignment --> INR
 t3.medium charges --> assignment
 
+```
 https://www.youtube.com/watch?v=iO8qpPeiph0&list=PLbeIORXauosjypPNHf4YGeEKN3KlSjzOj
+```
