@@ -1,6 +1,10 @@
 AWS Account
 ------------
 https://portal.aws.amazon.com/billing/signup
+
+#### How to create AWS account
+https://www.youtube.com/watch?v=F4jF88UkxV4
+
 1. CC/DB --> give details like
 firstname
 lastname
@@ -208,6 +212,6 @@ git bash
 ec2 t2-micro charges --> assignment --> INR
 t3.medium charges --> assignment
 
-```
+#### DevOps overview sessions
+
 https://www.youtube.com/watch?v=iO8qpPeiph0&list=PLbeIORXauosjypPNHf4YGeEKN3KlSjzOj
-```
