@@ -1,0 +1,169 @@
+ls
+cat
+touch
+rm
+rmdir
+mkdir
+cut
+awk
+curl
+wget
+grep
+head
+tail
+vim editor
+cp
+mv
+
+permissions
+--------------
+- rw-	rw-    r--
+  user  group  others
+  u      g      o
+  
+R -> 4
+W -> 2
+X -> 1 -> to run commands and shell scripts
+
+sivakumar --> DevOps Team
+user=owner
+group=devops
+others=testing,development team
+
+in Linux when you create user, a group with same name will be created
+sivakumar --> user sivakumar and group with name sivakumar also created
+
+chmod u+x sample
+
+chmod ugo+r sample
+
+sample
+
+u --> RWX
+g --> R
+o -> 0
+740
+
+u --> RWX
+g --> RX
+o --> X
+
+751
+
+User management
+-------------------
+ramesh joined devops team
+
+1. create user
+useradd <user-name>
+passwd <user-name>
+
+/etc/passwd --> will have user entries
+when a user is created, automatically group is created with same username
+
+getent groups
+/etc/ssh/sshd_config --> enable password authentication
+sshd -t --> checks for syntax of the file
+systemctl restart sshd --> 
+
+2. group create
+
+groupadd <group-name>
+
+3. every user will have a primary group and secondary group
+
+ramesh should be added to devops group
+
+usermod -g devops ramesh
+
+chown --> even file owner can't run this commands
+only sudo user can change the ownership
+chown <user>:<group> file-name
+chown <user>:<group> -R folder
+
+4. we will create testing group, we will give ramesh secondary access to testing
+
+usermod -aG testing ramesh
+
+gpasswd -d ramesh testing --> deletes ramesh from testing group
+
+user is leaving organisation
+------------------------------
+userdel <user-name> --> removes user from linux
+
+first user should be removed from the group
+
+1. project release
+2. company release
+
+
+process management
+----------------------------
+if you follow process you will get best results
+
+everything in linux is a process...
+
+Team Leader
+Team Manager
+Account Manager
+Senior Engineer
+Junior Engineer
+Trainee
+
+Team Leader --> 1 ticket created about devops pipelines setup = 1
+
+Senior Engineer --> 1
+
+sub task -> 2 --> Junior Engineer
+sub task -> 3 --> Junior Engineer-2
+
+Junior Engineer - 2 
+---------------
+sub task --> 4 --> trainee
+create a CI pipeline --> task completed
+ticket 4 --> task completed
+
+task ID --> 4 , parent task --> 3
+task 3 --> task 1
+
+whatever we do in linux --> a process id will be created and reported back
+
+ps
+
+echo Hello --> print Hello task given to Linux
+
+I need to create a process ID
+2345 --> result is hand overed to bash terminal 3720
+
+foreground process --> block terminal
+background process --> runs in background 
+
+when process stucks we need to kill it
+
+kill PID --> process may or may not be terminated
+
+when process stuck even kill can't kill it
+
+kill -9 --> forcefully terminate
+
+nodejs project
+----------------
+
+ps -ef | grep nodejs
+
+
+package management
+-----------------------
+yum command is used to install packages --> RHEL = centos = fedora = AWS Linux 2
+amazon-linux-extras
+yum install package-name
+
+raheem joined, how can you enable ssh accesss through private key
+------------------------------------------------------
+1. create raheem user
+2. give me your public key, keep your private key securely.
+
+700
+user --> RWX
+group 
+Others
