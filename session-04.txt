@@ -1,0 +1,175 @@
+Service Management
+--------------------
+Delhi --> Hyd
+To address
+----------
+D.No: 123, 2nd floor
+Tirumala apartment
+hitech city
+Hyderabad
+600082
+
+Shipping is in Hyd
+------------------
+HYD central Shipping Hub
+Hitech City Regional HUb --> area
+
+Hitech City Regional HUb --> Apartment
+D.No: 
+
+0-65,535 ports
+
+https://facebook.com
+
+ssh -i <private-key> ec2-user@IP
+
+ssh port no - 22
+http: 80
+https: 443
+mysql: 3306
+SMTP: 25
+FTP:
+
+
+
+Algorithm
+-----------------
+1. key gen
+2. public key import
+3. firewall create
+4. instance create
+5. ssh connect
+
+request reach IP address
+
+ssh --> 22
+system will check anything is running ssh process with port no 22
+now authentication will be checked
+
+
+https://facebook.com:443
+
+443
+
+facebook IP
+443 https process is running?
+login
+error
+
+service --> offering service
+
+nginx1 --> it should be running
+
+systemctl start nginx --> nginx will start run
+
+http --> 80
+
+systemctl status nginx
+systemctl stop ngix
+
+systemctl enable nginx --> if services are enabled, after restart automatically services will run
+systemctl disable ngix
+
+http://52.90.162.131:80
+
+
+Network management
+----------------------
+netstat --> network statistics
+
+netstat -lntp
+
+troubleshooting
+---------------------
+system resources
+	cpu memory --> 
+	HD full --> df -hT
+	RAm full --> free
+process is running or not --> ps -ef | grep nginx
+port opened or not --> netstat -lntp
+systemctl status <service> --> 
+firewall is opened or not 
+
+How to give access to Linux user
+---------------------------------
+Linux Admin --> full access to linux
+DevOps Admin --> limited sudo access
+	yum, systemctl
+
+ramesh --> admin, add him to wheel group or give admin group full access
+suresh --> devops
+
+/etc/sudoers --> edit
+visudo --> 
+
+%admin  ALL=(ALL)       /usr/bin/yum,/usr/bin/systemctl
+/etc/sudoers.d/
+
+3 tier architecture
+-------------------------------
+Desktop applications
+	Ms office
+	Player
+	Editors
+	
+Disadvantages
+-------------
+more CPU, RAM
+we have to installation
+we have to upgrade
+storage --> we lose data
+portability --> we can't work from anywhere
+
+Web applications
+-----------------
+Google sheets, docs
+Ms office
+
+
+Hotel Business
+---------------
+more people, more food, more money, more quality
+
+RAW Items --> Cook --> We are serving
+
+1. cook/cashier/manage customers --> roadside
+
+10 persons we are able to serve
+
+2. no proper cooking, we lose money --> hotel
+
+1 employee --> cook
+owner -> manage customers, token, money collection
+
+20 persons can be managed
+
+3. Restaurent
+
+Captain --> customers receive
+Waiter --> takes order
+Chef --> cook
+Raw Items
+
+1 server
+--------------------
+DB table format --> users cant understand
+Web application --> 
+	fiels --> enter username, enter password
+	
+	insert data into DB
+	
+Front End, Backend
+----------------
+HTML, JS, Angular JS, ReactJS
+Java/.NET/Python/NodeJS
+
+frontend+backend --> single application
+-------------------------------------
+queue management --> is tough
+security --> customers can easily copy your recipe
+
+if DB and application in single server
+-------------------------------------
+Load Balancer --> 
+
+
