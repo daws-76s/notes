@@ -136,7 +136,7 @@ I need to create a process ID
 2345 --> result is hand overed to bash terminal 3720
 
 foreground process --> block terminal
-background process --> runs in background 
+background process --> runs in background &
 
 when process stucks we need to kill it
 
@@ -158,6 +158,7 @@ yum command is used to install packages --> RHEL = centos = fedora = AWS Linux 2
 amazon-linux-extras
 yum install package-name
 
+apt-get 
 raheem joined, how can you enable ssh accesss through private key
 ------------------------------------------------------
 1. create raheem user
@@ -167,3 +168,10 @@ raheem joined, how can you enable ssh accesss through private key
 user --> RWX
 group 
 Others
+
+chown user:group <file-name>
+
+chmod o+r <file-name>
+
+https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.83/bin/apache-tomcat-9.0.83.zip
+https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.84/bin/apache-tomcat-9.0.83.zip

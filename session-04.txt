@@ -38,7 +38,7 @@ Algorithm
 2. public key import
 3. firewall create
 4. instance create
-5. ssh connect
+5. ssh connect --> private-key
 
 request reach IP address
 
