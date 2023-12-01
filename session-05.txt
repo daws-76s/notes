@@ -1,0 +1,61 @@
+Putty
+-----------
+username
+private-key/password
+IP address
+daws-76s.pem --> general format
+daws-76s.ppk -->putty private key
+
+ssh -i private-key/password username@IP
+
+Super Putty --> from putty extension to putty
+-------------
+
+Ngnix
+------------
+/usr/share/nginx/html
+
+front-end servers = http servers = 80
+hosts html/js based applications
+
+back-end servers = http = 8080
+tomcat, jboss, etc
+java, .NET, Python
+
+login.html --> http://joindevops.online:8080/api/login
+
+Linux Filesystem structure
+----------------------------
+/ --> root folder for liux server
+
+boot --> when server is getting started, server refers this directory and config from grub.cfg
+dev --> devices --> external devices are mounted here
+etc --> extra configuration
+home --> users home directory are created here
+lib/lib64 --> system needs libraries
+/media --> cd/dvd drive
+/mnt --> extra disks mount here
+/opt --> optional , manual installation of services or applications will be downloaded here
+/proc --> running process will store here with their PID
+/proc/cpuinfo
+/proc/meminfo
+
+/root --> root user home folder
+/run --> when server starts, server uses this directory as storage
+/bin --> cat,vim, touch, cd
+/sbin --> system commands like root access commands
+/tmp --> temp files, not important
+/usr --> all users,
+/var --> variables --> log files,
+
+
+symlink vs hardlink
+---------------------
+C:\Users\user\AppData\Local\Discord\Update.exe --processStart Discord.exe
+
+shortcut --> original file location
+
+symlink = symbolic link
+
+telnet ip port
+telnet ip2 80
