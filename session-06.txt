@@ -1,0 +1,119 @@
+Public vs Private IP
+How internet is working?
+Monolithic vs Microservices
+Security Groups
+Project discussion
+
+192.168.1.3 --> IP
+
+ 192.168.29.160 --> My private IP
+ 192.168.29.1 --> 	Modem
+
+2power32 --> 
+
+NAT --> Network Address Translation
+
+My Home pulbic IP: 49.43.243.168
+
+with in the network private IP
+latency: time to respond --> slow
+security: 
+cost: data charges
+
+DNS --> Domain name system
+---------------------------
+amazon.us --> IP address
+not in our home network
+not in jio network
+exchange point --> TATA, Airtel,
+cables --> go to us
+
+
+Security Groups
+--------------------------
+
+
+Monolithic vs Microservices
+--------------------------
+2012 TCS
+
+enterprise archive file --> this in only file of entire project
+
+Servlets --> DB connect data
+JSPS --> UI --> HTML
+
+1 month time
+
+small change is also a big release
+-----------------------------
+change management team
+they will do document --> client --> approve
+
+DEV --> QA --> UAT --> PROD
+
+FrontEnd --> Backend
+HTML, JS, AngularJS
+Java
+
+2 files
+frontend
+backend
+
+maintainance easy
+
+
+Backend
+---------------------
+1 file --> user, cart, products, payment, order, dispatch
+
+50 members
+
+products related code need to be changed....
+
+2 weeks 
+------------
+a change in product display
+a change in payment display
+
+a single failure also --> total failure
+
+java/.net
+
+user --> 5 java
+cart --> 5 python
+product --> 5 NodeJS
+payment
+
+Microservices
+---------------
+maintainance is easy
+language can be anything
+individual deployments
+server resources can be less
+autoscaling is very easy
+
+
+
+1. products --> heavy load --> wipro
+
+2. user --> they want add to wishlist --> HCL
+
+3. payment --> less load --> TCS
+
+Security groups
+---------------
+frontend apps --> 80
+backend apps --> 80 --> imagine
+
+I selected frontend SG in USER SG
+
+telnet <destination-IP> port
+
+telnet 3.208.3.54 8080
+
+inbound --> incoming traffic
+outbound --> outbound --> traffic originates from our server
+
+
+
+
