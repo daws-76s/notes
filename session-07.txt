@@ -1,0 +1,109 @@
+Roboshop configure
+---------------------
+1. Web/frontend tier
+2. App/Api/Backend tier
+3. DB tier
+
+DB apps are called statefull
+App/Web apps are called stateless
+
+CRUD over database
+--------------------
+create user
+read user
+update profile
+delete profile
+
+nginx is used as reverse proxy here.
+
+RHEL = Fedora = CentOs = AWS Linux
+
+CentOs
+
+devops-practice based on centos-8
+
+centos/DevOps321
+
+Web
+-----------
+http = web server
+nginx = 80
+
+dnf vs yum
+-----------
+centos 7 = yum is default package
+centos 8/9 = dnf is default package manager
+
+yum > dnf in memory
+
+/etc/nginx
+
+
+forward proxy vs reverse proxy
+-------------------------------
+VPN --> virtual private network
+
+Servers are not aware of clients are behind VPN
+anonymous access --> hiding our identity
+
+forward proxies can't understand real clients
+
+security --> companies can impose restrictions not to use particular sites, file upload and to monitor use internet behaviour
+
+clients are aware of proxy, servers are not aware
+
+reverse proxy
+-------------------------------
+clients are not aware of server side
+apps use reverse proxy to secure their code
+load balancing
+
+http://54.197.5.96/api/catalogue/categories --> querying catalogue to know the product categories
+
+HTTP status
+--------------------
+2** --> success
+3** --> redirect/temp --> images, gifs are redirected
+
+failure responses
+-----------------
+400, 404, 403, 402
+
+4** --> client side error
+5** --> server side error --> purely project error
+
+MongoDB
+-----------------
+
+forward proxy vs reverse proxy
+
+caching
+--------------
+Airtel --> 1000 users
+
+1 user downloaded bahubali movie --> server from US
+cache server --> bahubali movie
+
+2nd user get from cache server --> more speed
+
+127.0.0.1 --> localhost
+
+dnf install nginx -y
+systemctl start nginx -->
+
+
+http://54.197.5.96/api/catalogue/categories
+
+304 --> not modified
+
+Assignment
+--------------
+HTTP codes
+Forward proxy vs Reverse proxy
+configure our project
+
+devops-practice
+centos/DevOps321
+
+
+
