@@ -1,0 +1,122 @@
+DNS
+----------------------
+Domain name system
+
+facebook.com
+
+browser cache --> checks IP address exist or not
+browser --> OS, Hey OS do you know IP address for facebook.com
+OS cache --> checks IP address exist or not
+ISP resolver --> DNS resolution is a responsibility of ISP
+
+OS --> ISP resolver --> I need IP address for facebook.com
+
+ISP resolver cache --> checks IP address exist or not
+
+ISP resolver is configured with root servers
+
+few organisations voluntarily formed root servers...
+
+root servers  --> 13 root servers --> backed by many servers for load balacning purpose
+
+ISP resolver --> Root servers
+
+Root servers --> TLD(Top level domain)
+
+.com --> popular
+.in --> Indian gov will manage, .uk, .us, .au, .eu
+.org --> non profit organisations
+.net
+.gov
+.online
+.ai
+.shop
+
+.siva --> I will consult root servers that we started TLD and provide our info
+
+
+Root servers --> TLD info is provided to ISP resolver
+
+ISP resolver --> .com TLD
+
+.com TLD --> nameservers information
+
+ISP resolver --> .online TLD
+ISP resolver --> nameservers
+ISP resolver --> Hostinger
+
+
+Domain registars
+-----------------
+godaddy
+hostinger
+AWS
+
+hostinger --> daws76s.online
+
+.online --> TLD
+
+hostinger responsibility is to update, sivakumar reddy with details bought daws76s.online
+and the nameservers are 
+
+ns1.dns-parking.com
+ns2.dns-parking.com
+
+we are using AWS cloud, we need some records automatically created
+------------------------------------------------------------
+We need to nameservers transformation
+
+created hostedzone in AWS. we got NS
+
+We need to update NS in Hostinger
+
+Hostinger responsibility to update NS with .online TLD
+
+daws76s.online --> TLD
+
+Browser --> cache --> OS --> cache --> ISP --> cache --> Root servers --> TLD --> NS --> NS --> A records
+
+.siva --> root servers
+
+godaddy, hostinger
+
+shift + g --> go down
+gg --> go up
+q --> quit
+
+
+http://joindevops.online/api/catalogue/categories
+
+["Artificial Intelligence","Robot"]
+
+{
+    "_id": "656fe069af6cad5824e8533b",
+    "sku": "ROB-1",
+    "name": "Robbie",
+    "description": "Large mechanical workhorse, crude but effective. Comes in handy when you are lost in space",
+    "price": 1200,
+    "instock": 12,
+    "categories": [
+        "Robot"
+    ]
+}
+
+
+Login --> User DB
+
+User --> User DB
+
+cache --> data
+
+User --> cache --> User DB
+
+Register a domain
+create hostedzone in AWS
+change nameservers
+reconfigure roboshop web, catalogue, mongodb using domain
+
+what is cache? what is redis?
+
+
+
+
