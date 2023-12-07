@@ -1,0 +1,54 @@
+errors
+-------------
+web --> roboshop.conf catalogue IP
+catalogue --> is running or not
+			  data loaded to mongodb or not
+			  catalogue.service mongodb IP is good or not
+mongodb --> remote 0.0.0.0 allowed or not
+firewalls
+
+catalogue --> mongodb
+
+redis
+--------
+apps --> redis --> DB
+
+http://daws76s.online/api/user/login
+
+
+5min break
+
+How to install application in Linux
+-----------------------------------
+We should have server
+
+nodejs, .net, java, python, php, go, etc.
+
+install that programming langugage
+
+creating a directory
+
+creating a seperate user for that application
+
+downloading the application
+
+install dependencies
+nodejs --> npm
+java --> mvn
+python --> pip
+.net --> nuget
+
+we are giving how to run in /etc/systemd/system/application.service
+
+systemctl start application
+systemctl enable application
+
+nodejs --> npm
+maven --> automatically maven will install java
+npm install = mvn clean package = it will give a jar file
+
+java --> compile --> bytecode(.jar file)
+python=nodejs = no need of compile = no bytecode
+
+
+
