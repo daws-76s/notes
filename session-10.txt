@@ -1,0 +1,57 @@
+Deployment
+---------------
+developer will update the code
+he will push to some location as zip
+download new code
+stop the server --> stop catalogue
+remove old code
+unzip new code
+restart the server
+6hours --> testing
+
+
+RabbitMQ --> Messaging Queue Database
+
+synchronous --> asynchronous
+
+http/s --> synchronous
+
+server should be always up and running...
+400/500
+
+asynchronous
+--------------------
+client --> messaging broker --> server
+
+sivakumar --> ramesh
+
+there will be a queue for ramesh
+
+sivakumar --> ramesh queue
+
+ramesh whatsapp --> subscribed to ramesh queue
+
+if online --> message wil be delivered
+
+when ramesh gets online --> ramesh whatsapp --> ramesh queue
+
+payment --> rabbitmq --> dispatch
+
+dispatch is subscribed to rabbitmq
+
+payment --> they will send a message to MQ application
+
+dispatch --> listening to the queue
+
+money with draw --> queue --> email, sms, whatsapp, monitoring team
+
+withdrawal --> email, sms, whatsapp
+
+synchronous vs asynchronous
+
+
+
+
+
+
+
