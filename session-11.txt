@@ -140,8 +140,8 @@ Host github.com
   HostName github.com
   User git
   PreferredAuthentications publickey
-  IdentityFile ~/.ssh/daws-76s --> private key location
-  
+  IdentityFile ~/<replace-your-file-name>
+
 
 git init --> intialises a folder as git repo
 
