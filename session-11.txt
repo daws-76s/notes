@@ -1,0 +1,203 @@
+Project configuration
+----------------------
+create a server
+installed programming language
+downloaded code/application
+created directories, users
+installed dependencies
+start application
+
+deployment/release
+-------------------
+developer will push new app/code
+stop the server
+remove/backup the old code
+download new code
+start the server
+
+
+manual process
+----------------------
+downtime
+time consuming --> 30min
+manual mistakes
+troubleshooting
+who did the mistakes
+repeated work
+
+take 1 by 1 from the farm to house 
+
+through lorry --> learning curve, we need to learn driving
+
+coding --> learn scripting
+---------------
+programming --> java, .net, python
+scripting --> shell, python, ansible, terraform, kubernetes, etc.
+
+coding --> patterns and methods
+
+variables
+data types
+conditions
+functions
+loops
+
+algorithm thinking
+---------------------
+
+1. 10 public sessions, 11th session private
+
+
+1. first we need to get today's session no
+2. if today's session is greater than 10, we need to say it is private
+3. less than 10 public
+
+
+today session = 5
+
+if (today session) > 10
+	print("private")
+else
+	print("public")
+	
+install git through scripting
+--------------------------
+
+1. check user have sudo access or not
+2. if not sudo, we will throw error,
+3. if sudo proceed
+4. install package git
+5. we need to check explicitly installed or not
+6. if error installation throw the error to user, otherwise say success.
+
+
+shell scripting
+--------------------------
+where to keep the scripts???
+
+10 devops engineers
+--------------------
+one central location to do and share the things
+
+Git --> global information tracking system
+
+version control --> 10 days
+
+after 10 days --> I wanted to see what was script at 2nd day..
+
+we should always go back to previous version if something goes wrong
+
+track the changes --> through git we can understand who did that and why
+
+review the changes --> our team members should review
+
+backup and security
+
+branching --> create a branch from master, do the changes, if everything is good then proceed
+
+collabaration
+
+GIT is a popular decentralised version control system
+------------------
+decentralised/distributed vs centralised
+
+git repo --> store the code
+
+repository --> some storage just like folder with some extra capabilities
+
+https://github.com/daws-76s/test-repo.git
+
+push --> authentication
+
+username/password --> frequently we need to enter password every time
+username/key --> it will be automatically taken from private key
+
+place your public key in the server
+keep private key with you
+
+.ssh --> usually in user directory
+/c/Users/sivakumar/.ssh
+
+config --> no extensions to this file
+
+git --> concept
+
+github --> they took that concept and created github
+gitlab
+bitbucket
+
+https://github.com/daws-76s/test-repo.git --> username and password
+git@github.com:daws-76s/test-repo.git --> just private key
+
+~ --> your home folder
+
+/c/Users/ramesh
+
+/c/Users/user/daws-76s-github
+
+
+Host github.com
+  HostName github.com
+  User git
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/daws-76s --> private key location
+  
+
+git init --> intialises a folder as git repo
+
+git status --> we can know what is the status of our files
+
+git add --> 
+
+100 scripts
+
+signup, login, forgot password
+
+temp area --> select what is completed and push to git
+
+signup --> add to it temp area and push to git
+
+git config --global user.name "your-user-name"
+git config --global user.email "your-email-id"
+
+git commit -m "as part of bug fix" --> till here local...
+
+signup for github
+create or use existing pub/private key
+place pub key in github
+keep private key
+create .ssh folder in home directory
+create config file without extensions in .ssh folder
+
+make sure you give your username and email before commit.
+
+
+Host github.com
+  HostName github.com
+  User git
+  PreferredAuthentications publickey
+  IdentityFile ~/<replace-your-file-name>
+  
+1. create repo in github
+
+IDE --> integrated development environment
+
+master --> PROD
+
+duplicate file, edit that, check that and then proceed
+
+create another branch --> do changes --> test changes --> merge
+
+master --> slave
+
+main --> this is PROD branch
+
+feature-123
+
+
+
+
+
+
+
+
