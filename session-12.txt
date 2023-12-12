@@ -1,0 +1,129 @@
+1. signup for github
+2. we need to generate keys or use existing keys
+3. keep public key in github
+4. create .ssh folder in user directory in not exist.
+/c/Users/user/.ssh
+5. create config file in .ssh, without extension
+6. keep the github config
+
+/Users/<user-name>/.ssh --> Mac
+/home/<user-name>/.ssh --> ubuntu
+
+~ --> denotes home folder
+
+github  --> a folder in internet with some tracking capabilities
+
+clone a repo from git
+-------------------------------
+clone --> downloading a copy
+git clone <URL>
+
+add to staging/temp area
+--------------------
+git add <file-name>
+git add .
+
+commit into local repo
+-------------------
+git commit -m "I m practicing git"
+
+push into central repo
+--------------------
+git push origin <branch-name>
+
+
+you have alreay existing folder
+--------------------------------
+git init --> intializing a folder as git
+git branch -M main
+
+
+git remote add origin git@github.com:daws-76s/test-repo-2.git
+git push -u origin main
+
+
+#!/bin/bash --> shebang
+
+to check the syntax of our shell script, we need to give the location of bash
+
+/bin/bash
+
+#!/bin/bash -->
+
+shell script == bash script
+
+sh <script-name>
+
+
+variables
+----------------------------------
+x=1, y=2, z=3
+
+a big formula
+
+we derive formula and finally we submit values...
+
+DRY --> don't repeat yourself
+
+VARIABLE_NAME=VALUE
+
+PERSON1=Ramesh
+PERSON2=Suresh
+
+change in a single location will effect everywhere automatically
+
+how do you run commands in shell script and take output
+
+$(<command>)
+
+arguments == args
+
+sh 02-variables.sh Robert John Ram Raheem
+
+$1=Robert
+$2=John
+
+DB we need to connect, username/password
+
+data types
+---------------
+int, float, string, double, long, char, boolean, array, arraylist, map, set
+
+int --> -33,334 to 33,334
+float --> 1.2, 1.4
+string --> ramesh
+double --> 33.43435
+long --> 423742193451405
+char --> a, b, c
+boolean --> true/false
+array --> (ram robert raheem)
+arraylist --> (ram robert raheem)
+map --> name: sivakumar, tech: devops
+
+shell don't care much about data types
+--------------------------------------
+fruits=("apple" "banana" "pomo")
+
+int NUMBER1=$1
+int NUMBER2=$2
+
+3 fruits
+
+0
+1
+2
+
+Java, .NET, python
+
+Shell --> Linux OS scripting
+
+execute --> something need to be executed
+
+shell vs python
+------------------
+english --> telugu
+
+Linux --> shell script
+linux commands in a file is called shell script
+
+python --> convert that into shell script
