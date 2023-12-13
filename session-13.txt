@@ -1,0 +1,153 @@
+conditions
+----------------
+
+if(expression){
+	statement if expression is true
+}
+else{
+	statement if expression is false
+}
+
+if(expression){
+	statement if expression is true
+}
+else if(expression){
+	statement if expression is true
+}
+else if(expression){
+
+}
+else{
+	statement if expression is false
+}
+
+if(today != "sunday"){
+	print "goto school"
+}
+else{
+	print "Happy Holiday"
+}
+
+20
+if 20 is greater than 100 then print, given no is greater than 20
+otherwise print less than 100
+
+$NUMBER > 100
+
+$NUMBER -gt 100
+
+$NUMBER -lt 100
+
+$NUMBER -ge 100
+
+$NUMBER -le 100
+
+Install MySQL through shell script
+------------------------------
+
+steps:
+-------------
+1. check user is root or not
+2. if root --> if id is not equal to 0, then it is not root user
+	 proceed
+   if not root
+	 stop and say run with root access
+3. now install mysql
+4. check installed properly.
+5. if success
+	 then good
+   not success
+      show what is the error
+
+100 statements
+10th line --> error
+
+1. stop, clear the error and proceed
+2. dont worry about error, proceed
+
+shell script wont stop if it faces error,
+
+it is our responsibility to check and proceed
+
+EXIT status
+---------------
+previous command success or not
+
+$? --> if success, it has 0
+if failure, not zero
+
+single task
+---------------
+1. 30 lines
+2. 10 lines
+
+less lines of code is preferred doing the same task
+
+function --> code that is repeated again, you can keep in function and call it whenever you want....
+
+manager --> developer
+
+FUNCTION_NAME(){
+	statements to run
+}
+
+VALIDATE(){
+	statements to run
+}
+
+FUNCTION_NAME --> calling name
+
+storing logs --> what happened yesterday
+
+> --> redirection
+
+Redirections
+---------------
+command > temp.log --> by default success output only stores here
+
+1 --> success
+2 --> failure
+& --> both success and failure
+
+> --> replace previous output
+
+>> 
+
+script-name-<date>.log
+
+$? --> exit status of previous command
+$0 --> you will get script name
+$1
+$2
+$N
+$@
+$#
+
+
+RED -- \e[31m
+GREEN -- \e[32m
+YELLOW -- \e[33m
+normal -- \e[0m
+
+echo -e "Hello Iam learning \e[31m Shell script"
+
+loops
+-----------------
+1 100
+
+eho 1
+echo 2
+echo 3
+echo 4
+
+for(int i=0;i<100;i++){
+	print i;	
+}
+
+<h1>fkhdfkjdffjdf;djfl</h1> fjdfjdf;lf
+
+
+
+LOGFILE=/tmp/something.log
+
+ls -ltr &>> $LOGFILE
