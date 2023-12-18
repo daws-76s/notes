@@ -1,0 +1,94 @@
+variables
+data types
+conditions
+loops
+functions
+
+
+algorithm
+-----------------
+
+
+delete old log files
+disk usage and alert
+
+
+1. we have a folder where we are storing log files
+/tmp/shell-script-logs
+
+2. delete log files more than 14 days, only .log extensions not anyother files
+
+
+source-directory
+search .log files and more than 14 days old
+rm -rf
+
+find . -type f -mtime +14
+,
+;
+
+disk usage
+-----------------------
+monitoring team --> servers, websites
+
+servers are down/more memory --> alert DevOps Team
+
+Hard Disk --> just beside our laptop
+G/M Drive --> they are in network, connecting through internet
+
+lsblk
+sudo file -s /dev/xvdf
+sudo lsblk -f
+sudo mkfs -t xfs /dev/xvdf
+sudo mkdir /data
+sudo mount /dev/xvdf /data
+
+| --> or
+& --> and
+
+chrome --> gmail.com --> compose msg --> send
+
+Linux --> send a gmail
+
+@cognizant.com
+@tcs.com
+
+
+yum -y install postfix cyrus-sasl-plain mailx
+
+
+postfix --> Hit Gmail API
+cyrus-sasl-plain --> authentication
+mailx --> command to send email
+
+from_address --> who is sending
+
+devopsandcloudwithsiva@gmail.com --> from address
+info@joindevops.com --> to adress
+
+ujuggcnzjmldgmkj
+
+[smtp.gmail.com]:587 devopsandcloudwithsiva:ujuggcnzjmldgmkj
+
+echo "This is a test mail & Date $(date)" | mail -s "message" info@joindevops.com
+
+
+delete old log files
+---------------------
+1. user has to provide source directory
+2. action --> archieve/delete
+3. if he selects archieve --> where is the destination directory
+4. time --> optional, if he gives take it, otherwise 14 days default
+5. memory --> optional. if he dont give dont consider, if he gives consider it...
+
+old-logs.sh -s <source-dir> -a <archieve/delete> -d <destination-dir> -t <no-days> -m <memory-in-mb>
+
+algorithm
+---------------
+-s, -a, -d --> check all these inputs, if he dont give tell him the usage....
+
+source directory exists or not
+destination directory exists or not
+
+-a --> archieve if he dont give destination dir throw error about destination-dir
+

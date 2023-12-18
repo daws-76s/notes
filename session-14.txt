@@ -1,0 +1,42 @@
+variables
+
+DATE=2023-09-09
+
+using loops install any no of packages
+--------------------------------------
+sh 13-install-packages.sh git mysql gcc postfix net-tools
+
+$# --> no of args
+$@ --> all args
+
+1. check root user or not
+2. if root user
+		check package is already installed or not
+			if installed skip it and tell user, already installed
+			if not installe, install it
+			validate it
+	if not root user
+		throw the error
+		
+1. delete old log files, disk usage monitor
+
+SED editor = streamline editor = temporary editor
+--------------------------------
+CRUD
+
+sed -e '1 a I am learning Shell script' <file-name>
+
+-e = temp change
+-i = perm change
+
+sed -e '1 i I am learning Shell script' <file-name>
+
+lines update
+--------------
+sed -e 's/word-to-find/word-to-replace/' --> by default first occurence in every lines
+sed -e 's/word-to-find/word-to-replace/g'
+
+sed -e '/learning/ d' passwd
+
+sed -e '1d' passwd
+
