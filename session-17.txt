@@ -1,0 +1,131 @@
+crontab
+
+5 4 * * *
+
+$1 $2
+
+greeting
+
+sh greeting.sh -n <name> -w <wishes>
+
+usage
+
+by default I want to say Good Morning. If user wants another wishes he can give Good Evening.
+
+AWS instances, route 53 records
+------------------------------------------
+1. we need to create ec2 instances
+2. mongodb, mysql, shipping we are creating t3.small remaining t2.micro
+3. creating route53 records, web public ip remaining private ip
+
+IAM --> identity access management
+-----------------------------------
+Authentication --> username/password
+Authorization
+
+Authorization --> you need to have access to enter project bays
+
+Roles --> permissions
+---------------
+Team Manager --> super admin
+Team Lead --> admin
+Senior Engineers --> normal access
+Trainee --> READ access
+
+
+user == person --> username/password = authentication
+
+Authorization
+----------------
+Role and permissions
+
+user --> what is the role of user ? --> what are the permissions attached to that role
+
+Permissions
+-----------------
+Nouns and Verbs
+
+AWS --> EC2, VPC, Route53, CDN, IAM == AWS resources
+
+Resource
+-------------
+web, cart, catalouge, hostedzone == nouns
+create, update, read, delete == actions == verbs
+
+sivakumar == trainee
+-------------------
+EC2 --> Web --> READ
+
+TRISHANT == Junior DevOps Engineer
+
+EC2 --> WEB --> READ and UPDATE
+
+Sandhya == Senior Engineer
+
+EC2 --> WEB --> Create, READ, UPDATE
+
+Aditya == TEAM Lead
+
+EC2 --> WEB, CART, CATALOGUE, etc --> Create, READ, UPDATE
+
+Akhila --> TEAM Manager
+
+EC2 --> WEB, CART, CATALOGUE, etc --> Create, READ, UPDATE and DELETE
+
+Resources also should have access to access another resources
+----------------------------------------------------------
+Roles to resources 
+
+instance can create other instance
+
+aws ec2 run-instances --image-id ami-03265a0778a880afb --instance-type t2.micro --security-group-ids sg-087e7afb3a936fce7
+
+ami-03265a0778a880afb
+
+1. create one user and gave admin access
+2. create access keys
+
+AKIAUSW45M2WHLZYIMFP
+fOOpKufyvMMf7ZlyqnmnwGvg1kC+eUB9GRBCYTav
+
+created role
+attached permissions
+named it
+
+attach this role to instance...
+
+algorithm
+---------------
+1. instance creation
+
+aws ec2 run-instances --image-id ami-03265a0778a880afb --instance-type t2.micro --security-group-ids sg-087e7afb3a936fce7 --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=production}]' 
+
+2. mongodb, mysql, shipping t3.small otherwise t2.micro
+3. we need ip address to create route53 record.
+
+
+aws route53 change-resource-record-sets \
+  --hosted-zone-id 1234567890ABC \
+  --change-batch '
+  {
+    "Comment": "Testing creating a record set"
+    ,"Changes": [{
+      "Action"              : "CREATE"
+      ,"ResourceRecordSet"  : {
+        "Name"              : "'" $ENV "'.company.com"
+        ,"Type"             : "A"
+        ,"TTL"              : 1
+        ,"ResourceRecords"  : [{
+            "Value"         : ""
+        }]
+      }
+    }]
+  }
+  '
+
+improvements
+---------------
+if web, get public ip and create records
+check if records already exists
+	if exists update
+	if not exist create
