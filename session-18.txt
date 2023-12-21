@@ -1,0 +1,133 @@
+Ansible
+-------------------
+shell disadvantages
+
+1. shell script will not work in all linux distros.
+2. scalability --> difficult to manage more no of servers
+3. error handling and validations, need to manual
+4. readability
+5. shell will only work for linux, will not work with external systems
+
+Configuration management
+-------------------
+configure your laptop
+to make server ready for application deployment is called configuring server
+
+deployment
+------------
+1. stop the server
+2. remove old code
+3. download new code
+4. restart server
+
+
+Idempotence --> 
+
+if you run a program multiple time, that can create samething multiple times
+even you run your program infinite times, it should not create any damage
+
+providing same result irrespective of no.of executions is called idempotence
+
+
+useradd ramesh
+1. it will create multiple ramesh users --> bad
+2. it will try to create user, but got error and program exit --> no
+
+ansible --> if not exist it will create, if exist it will ignore --> yes
+
+
+Delhi --> Hyderabad --> today
+
+Delhi --> HYD DTDC
+
+You  going to HYD DTDC everyday and ask for courier
+2nd day
+3rd day
+4th day
+5th day --> got courier
+
+HYD DTDC --> deliver to home
+
+traffic increases
+fuel consumption
+resources waste
+time waste
+
+pull based configure
+-------------------
+chef server
+
+we will configure agents to check every 1 hour
+
+24*7 = 168 time connect to server
+bandwidth waste
+resources consumption like CPU and memory
+
+pull configuration have one advantage --> at the end of ansible
+
+Linux --> everything is called as command
+ansible --> module/collection
+
+one by one module --> success/fail
+
+keep all modules/commands in a file
+keep some validations, conditions, loops, variables
+now run the file
+
+Playbook --> a file of modules/collections
+YAML --> yet another markup language
+
+
+deposit form/ withdrawal form
+-----------------------------
+
+NAME
+A/C
+DATE
+BRANCH
+AMOUNT
+
+AMOUNT
+NAME
+A/C
+BRANCH
+
+NAME
+A/C
+DATE
+BRANCH
+AMOUNT
+
+DTO --> data transfer object
+----------------------------
+XML --> Extensive Markup Language
+
+<User>
+	<Email>info@joindevops.com</Email>
+	<Password>admin123</Password>
+</User>
+
+JSON --> Java script object notation
+----------------------------
+
+{
+	"Emai": "info@joindevops.com",
+	"Password":"admin123"
+}
+
+YAML
+----------------------------
+email: "info@joindevops.com"
+password: "admin123"
+
+
+address_____________
+
+addressline1
+addressline2
+street
+city
+
+
+
+

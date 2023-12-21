@@ -1,0 +1,21 @@
+variables
+--------------------
+DRY --> dont repeat yourself
+
+variables we keep aside from the code, so that code will not be disturbed when we are doing changes.
+
+variable holds a value, you can use it anywhere
+
+data types
+-------------------
+list
+map
+boolean
+key, value
+
+conditions
+-----------------
+id roboshop
+if not exist we created, if exist we skipped
+
+SOME_VAR=$(command)
