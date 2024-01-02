@@ -1,0 +1,51 @@
+ansible vault
+--------------
+storage of secrets
+
+asaiavaa --> siva
+adaeavaoapas --> devops
+
+encoding --> a proper pattern to encode the text
+aadaaeaavaaoaapaas
+
+encryption with password --> AES256 (mathematic algorithm)
+
+dfkgfagjg;gjgg --> devops
+
+u4392854194586174598yhf --> devops
+
+how to create ansible vault
+--------------------------
+ansible-vault create /path/some-name.yaml
+
+dynamic inventory
+--------------------------
+we have servers, domains
+
+we had on premise servers, apps are deployed manually
+we used shell script to configure
+
+2016 --> internet usage, digital revolution
+2010/2012 --> EU, US
+
+autoscaling of servers highly required
+
+
+we are using ansible to configure
+	- if you have more servers dynamically
+	
+10 servers now --> because of traffic
+
+I need to run ansilbe playbook against these servers
+
+ansible --> AWS --> fetch ip address of the servers dynamically
+
+fetch instances with name web in us-east-1
+
+plug and play
+
+if ansible have plugin to connect aws ec2, we can fetch ip addresses
+
+boto and botocore --> aws python modules
+
+ansible uses boto and botocore in background to connect aws

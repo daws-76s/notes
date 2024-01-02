@@ -1,0 +1,25 @@
+variables
+conditions
+loops
+
+command --> won't respect target machine shell variables and environment, it is running the command from outside
+shell --> It is like you logged in inside target machine directly and running command
+
+
+if I login to catalogue
+-----------------------
+dnf module disable nodejs -y ; dnf module enable nodejs:18 -y
+
+"dnf module disable nodejs -y ; dnf module enable nodejs:18 -y"
+
+Could not find or access '/tmp/catalogue.zip' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option
+
+ansible controller/server --> catalogue
+
+{
+'changed': True, 
+'stdout': '11', 
+'stderr': '', 
+'rc': 0, 
+'cmd': 
+['mongo', '--host', 'mongodb.daws76s.online', '--quiet', '--eval', 'db = db.getSiblingDB(\"catalogue\"); db.products.count()'], 'start': '2023-12-22 02:39:19.967161', 'end': '2023-12-22 02:39:20.070547', 'delta': '0:00:00.103386', 'msg': '', 'stdout_lines': ['11'], 'stderr_lines': [], 'failed': False}

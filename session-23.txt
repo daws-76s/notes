@@ -1,0 +1,52 @@
+ansible.cfg --> ansible configuration file
+
+1. ANSIBLE_CONFIG (environment variable if set)
+
+2. ansible.cfg (in the current directory)
+
+3. ~/.ansible.cfg (in the home directory) --> it should be .
+
+4. /etc/ansible/ansible.cfg
+
+{
+"orderid": "99d85872-f551-4c7b-b978-35fe5cbea932",
+"user": "siva",
+"cart": 
+	{"total": 1646.25, "tax": 274.375, "items": [{"qty": 1, "sku": "ROB-1", "name": "Robbie", "price": 1200, "subtotal": 1200}, {"qty": 1, "sku": "SHIP", "name": "shipping to India Hyderabad-Deccan", "price": 446.25, "subtotal": 446.25}]}}
+	
+tags
+---------------
+
+
+new deployment
+--------------
+stop the service
+remove old code
+download latest code
+restart server
+
+configuration management
+------------------------
+DEV --> versions update, installations, etc.
+QA
+UAT
+PRE-PROD
+PROD
+
+DB password, endpoints, etc.
+
+
+Ansible
+--------------
+AMI
+
+RHEL-8
+
+base OS + harden CSI benchmarking + default packages + company certificates + antivirus + sshd configure + banner
+
+RHEL-8-joindevops
+
+They get all the servers running in cloud --> AMI version
+	if OS is more than 3 months old, we will send an alert
+	
+key based --> configure pem key in ansible server
