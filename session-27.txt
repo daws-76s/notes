@@ -1,0 +1,55 @@
+variables and precedence
+conditions
+	condition ? "true" : "false"
+	
+functions
+loops
+	count based loops --> useful mostly to iterate lists
+	foreach --> useful to iterate maps
+	dynamic loop
+outputs
+locals
+
+data sources
+------------------
+it is useful to query the data dynamically from providers
+
+foreach loop
+-------------------
+terraform will give variable each
+80
+443
+22
+
+state and remote state
+---------------------
+whatever we write it should create --> declarative
+
+declarative = desired state
+current state = terraform.tfstate
+
+desired state == current state
+
+terraform will check current state, if current state is equal to desired state then it will not take any action...
+
+pushing to github
+
+another devops-2 cloned the repo and tried to run again
+
+devops-1 and devops-2
+
+both are running terraform apply
+
+duplicates may come, some resources got error as already exist..
+
+we need to a central state file to check the infra exists or not...
+
+1. collabaration
+	terraform will have no idea about the infra created, if multiple persons are working on same infra, it will try to create duplicates and errors may also come
+2. security
+	tfstate is a crucial, if you keep it in local it may be deleted or updated by mistake.
+
+
+provisioners
+module
+

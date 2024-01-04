@@ -1,0 +1,33 @@
+Roboshop lo Web component costs?
+
+if(expression){
+	if true this will run
+}
+
+if(expression){
+	if true this will run
+}
+else{
+	if false this will run
+}
+
+expression ? "this will run if true" : "this will run if false"
+
+loops
+------------
+count based loop
+for each loop
+
+create instances and update R53 records
+---------------------------------------
+
+
+functions
+-------------
+it will do some work
+but we need to give some input
+it will give some output
+
+locals
+-----------------
+locals is just like variables, but it have some extra capabilities. you can keep functions and expressions inside locals and use them

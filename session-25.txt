@@ -1,0 +1,87 @@
+Terraform --> popular infrastructure as a code
+
+Ansible --> configutation management, configutation as a code
+
+manual
+shell script
+Ansible --> preferred
+
+
+
+version control
+	if you keep code in Git, we can maintain history and you can get back previous versions
+	
+consisten infrastructure
+	same code will work with all environments, so infrastructure is consistent across all environments
+	
+automated infra --> CRUD
+create
+read
+update
+delete
+
+inventory management
+cost optimisation
+	create when required, stop or delete when not required
+automatic dependency management
+	we can create resources, terraform will take care of dependency management
+modules
+	you can create terraform code as modules, other projects can use it without writing from the scratch
+	
+declartive way of creative infrastructure
+	what is declartive? whatever you write you will get provided if you write correct syntax. easy syntax, no need to follow sequence
+	
+used for hybrid cloud and many other providers
+	AWS, Azure, GCP, etc.
+
+terraform --> it will check all the paths you have given in environment variables, if it is available then your command will work
+
+1. install terraform
+2. install aws cli
+
+let us create one EC2 instance
+--------------------------------
+
+HCL --> Hashicorp configuration language
+
+variables
+conditions
+loops
+functions
+data types
+
+resource "what-resource" "name-your-resource-your-wish" {
+
+
+}
+
+terraform requires AWS provider configuration to create AWS infra
+
+.sh, .yaml, .tf
+
+1. create IAM admin user
+2. create access key and secret key
+3. aws configure
+
+sg --> optional, then default security group will be attached
+
+where to run terraform command, wherever .tf file exists you have to run terraform command in that directory
+
+terraform init --> intialize the provider,
+.terraform folder is created and provider downloaded
+
+terraform plan --> just a plan, will not create actually
+
+terraform apply --> now it will create resource
+
+variables
+-------------
+
+variable "name-of-your-variable"{
+	type = data-type
+	default = "default-value" # we can always override
+}
+
+	
+	
+	

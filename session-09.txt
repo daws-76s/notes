@@ -50,5 +50,6 @@ npm install = mvn clean package = it will give a jar file
 java --> compile --> bytecode(.jar file)
 python=nodejs = no need of compile = no bytecode
 
+t3.medium --> mongodb, shipping, mysql
 
 
