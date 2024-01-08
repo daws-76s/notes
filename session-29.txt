@@ -1,0 +1,185 @@
+Modules development
+-----------------------
+DRY --> Don't repeat yourself
+
+code reuse, no need to write infra for every project from the scratch
+
+ec2.tf
+variables.tf
+
+module "name" {
+
+}
+
+1. customised modules for our organisation
+2. open source modules
+
+1. module developer --> who develops modules
+2. module user --> who consumes modules
+
+VPC --> Virtual private cloud
+----------------------------------
+physical space
+AC
+power backup
+network connections
+security gaurds
+network field engineer
+linux admin team
+
+an isolated network with in AWS. 
+
+Village --> VPC
+-----------------
+streets --> admin, proper organisation and maintaince
+
+subnets --> 
+	HR department
+	Databases
+	Fianance
+
+	Public affairs
+	minister offices --> no direct access
+	PM office --> no direct access
+Arch --> entry point = internet gateway
+
+roads = routes
+
+public/private
+
+route tables --> routes
+public route table --> routes --> attatch with public subnets
+private route table --> routes --> attatch with private subnets
+database route table --> routes --> attatch with database subnets
+
+CIDR --> classless inter domain routing
+------
+ipv4 --> 192.168.1.1 --> 32 bits = 4 octates
+
+0 1 2 3 4 5 6 7 8 9 ---> 10 numbers
+0,1 --> 2 numbers
+
+
+- - - - - - - -
+	
+1st --> 2^0 --> 1
+2nd --> 2^1 --> 2
+3rd --> 2^2 --> 4
+			--> 8
+			--> 16
+			--> 32
+			--> 64
+8th --> 2^7 --> 128
+
+1+2+4+8+16+32+64+128 = 255
+	
+11000000.10101000.00000001.00000001
+
+2^3 = 8
+2^5 = 32
+2^7 = 128
+
+decimal --> binary
+15.197.142.173 --> facebook IP
+
+home network --> facebook network --> particular server
+
+IP = Network + Server IP
+
+10.0.0.0/16 --> first 16 bits are for network, next 16 bits are for servers
+10.0.0.1
+10.0.0.2
+10.0.0.3
+10.0.0.3
+
+_ _ = 2^2
+
+0 0
+0 1
+1 0
+1 1
+
+_ _ _ = 2^3
+
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+
+32 bits --> 2^32 == 403 crores
+IP address
+
+NAT --> network address translation
+
+subnetting
+-------------
+549906 --> village pin code
+street --> street 1
+home number --> 1-12 --> street 1 and house 12
+
+1-12
+549906
+
+IP = network+host
+
+10.0.0.0/16 --> 2^16 IP are possible
+
+public subnet
+private subnet
+database subnet
+
+10.0.1.0/24 --> 2^8 = 256 IP are possible
+
+10.0.1.0
+10.0.1.1
+10.0.1.2
+.
+.
+.
+.
+10.0.1.255
+
+10.0.2.0/24 --> 2^8 = 256 IP are possible
+
+10.0.2.0
+10.0.2.1
+10.0.2.2
+.
+.
+.
+.
+10.0.2.255
+
+10.0.1.0/20 --> 20 bits network, 2^12 = 4096 servers you can configure
+
+10.0.1.0/32 --> 10.0.1.0
+
+16-28
+
+10.0.0.0/28 --> 28 bits are for network, 2^4 = 16 servers
+10.0.0.0/16 --> 16 bits are for network, 16 bits are for hosts --> 65k
+
+
+VPC
+internet gateway --> VPC
+public subnet
+private subnet
+
+public route table
+private route table
+
+Regions and AZS
+ap-south-1
+
+ap-south-1a --> west mumbai --> psunami
+ap-south-1b --> east mumbai --> far from sea
+
+ap-south-1c --> south
+
+NAT gateway and VPC peering
+
+

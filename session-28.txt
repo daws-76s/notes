@@ -1,0 +1,72 @@
+variables
+conditions
+loops
+functions
+data source
+outputs
+locals
+count
+dynamic
+state and remote state
+
+
+how you create multiple env with terraform
+provisioners
+
+multiple env
+-------------
+tfvars
+workspaces
+diff repos
+
+mongodb-dev, redis-dev
+mongodb-dev.daws76s.online
+
+same code but different configuration
+diff buckets to maintain state
+
+web-dev or web-prod or web-qa
+
+if key starts with web
+
+workspaces
+------------------
+terraform.workspace --> dev
+terraform.workspace --> prod
+
+create different repo for different env
+
+1. pros --> same code
+   cons --> same code for multiple env, you need to be very careful because whatever changes you do that will apply to prod
+
+2. pros --> same code
+   cons --> same code for multiple env, you need to be very careful because whatever changes you do that will apply to prod
+   
+   terraform is maintaining same bucket that may cause errors and difficult to maintain, difficult to maintain variables
+   
+3. pros --> since everything diff, you no need to worry
+   cons --> code duplication, you need to maintain 2 repos
+   
+provisioners
+----------------
+2 types of provisioners
+1. local-exec --> local to where you are terraform command
+2. remote-exec --> this will run inside the server
+
+provisioners are useful to integrate terraform with configuration management tools like ansible
+
+server creation --> infra creation
+server configuration --> configuration management
+
+creation time --> this local exec will run when server is create
+destroy time --> at the time of destroy
+
+remote-exec
+-------------
+1. first you should connect to server
+2. then you can run anything inside the server
+
+
+
+
+
