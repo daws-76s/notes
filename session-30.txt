@@ -1,0 +1,72 @@
+HA
+atleast 2 AZ resources be there
+
+az-1 public subnet az-2 public subnet
+az-1 10.0.1.0/24 
+az-2 10.0.2.0/24
+
+az-1 private subnet az-2 private subnet
+az-1 10.0.11.0/24 
+az-2 10.0.12.0/24
+
+az-1 database subnet az-2 database subnet
+az-1 10.0.21.0/24 
+az-2 10.0.22.0/24
+
+NAT gateway 
+--------------
+we need to update packages, we need to download something. We should connect internet
+outgoing
+incoming traffic is disabled...
+NAT gateway should be in public subnet because it has internet connectivity, then we add i in the route tables..
+
+it is chargeable
+
+VPC Peering
+---------------
+By default we cant connect 2 vpc. it is possible through VPC if we want
+
+condition --> Both VPC should have different CIDR.
+
+Requestor VPC --> I want to connect with you please accept my request.
+Acceptor VPC
+
+VPCs in same region same account
+VPC in another region same account
+VPC is same region another account
+VPC in different region another account
+
+Requestor VPC --> roboshop
+Acceptor VPC --> Default
+
+1. create VPC
+2. create igw and attach
+3. create all subnets
+4. create route tables
+5. create routes
+6. associate with subnets
+7. create eip
+8. create nat
+9. add nat gateway route in private and database subnets
+10. peering connection
+11. routes
+
+common tags
+Project = roboshop
+Terraform = true
+Environment = dev
+Name = something
+
+vpc tags, subnet tags, nat gateway tags, Name=another thing
+
+merge common tags and resource tags
+
+roboshop-dev --> 
+roboshop-prod
+
+I will fetch az from AWS using data source and I will get first 2 AZ.
+
+slice(list, 0, 2) --> 0,1
+roboshop-dev-us-east-1a
+
+
