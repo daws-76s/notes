@@ -1,0 +1,15 @@
+private
+--------
+1. first connect to public instance
+2. from public you can connect private
+
+vpn
+----
+inbound
+mongodb --> vpn security group
+
+mongodb
+--------
+1. vpn
+2. catalogue
+3. user

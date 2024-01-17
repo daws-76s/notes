@@ -1,0 +1,13 @@
+user can decide peering required or not
+if required
+	1. they have to give peering VPC ID
+	2. if they are not giving peering VPC ID, we will consider default VPC
+	
+Requestor - roboshop
+Acceptor - user provided VPC or default
+
+roboshop-dev-mongodb
+	1. accept connections only from catalogu and user
+
+create a vpn in default VPC
+connect to vpn in your laptop, then only you can access instances...

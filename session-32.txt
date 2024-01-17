@@ -1,0 +1,22 @@
+sg module create and create all security groups
+roboshop-dev-mongodb
+
+mongodb:
+- catalogue
+- user
+
+source: catalogue IP address
+source sg id: sg-018af35c4f2bb2497 --> catalogue
+port: 27017
+
+mongodb sg, catalogue sg
+
+roboshop-dev-mongodb
+
+sbnr-1234, sbnt-3456 --> for AWS it is list, but for us it is string
+
+[]
+
+1. create one ec2 in public subnet, login to that ec2 first and from there connect to mongodb
+2. vpn installation, connect to private servers through vpn
+
