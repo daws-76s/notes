@@ -1,0 +1,51 @@
+1. how to develop module
+2. how to use module
+3. SSM paramter store to store the configuration.
+	one project exports configuration
+	another project can refer configuration
+4. SG --> 
+
+VPC and peering
+All SG
+VPN
+EC2 and records
+
+create one ansible server, this server will provision playbooks to all the EC2
+
+Load Balancer
+Target groups
+rules
+
+launch template
+auto scaling
+auto scaling policy
+
+
+one manager, team leaders, team members
+
+clitens will send requirements to manager
+1. UI requirements
+2. backend requirements
+3. database requirements
+
+UI team leader, backend leader, database leader
+
+team leader --> team members
+
+manager --> load balancer
+
+running 2 nginx servers
+
+instances will get requests from load balancer
+ingress rule should have a security which is attached to load balancer.
+
+client --> manager
+target groups --> teams
+ui, backend, database
+health check
+1. instance up
+2. is instance busy serving other requests
+
+ip:80 -> 200 success
+
+http://nginx-balancer-1490265862.us-east-1.elb.amazonaws.com:80/ui/
