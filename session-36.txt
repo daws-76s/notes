@@ -1,0 +1,53 @@
+client --> Business analyst --> team manager --> team leads --> team members
+
+team manager --> only listen to business analyst
+team manager
+	ui team lead --> if ui work, he will redirect to UI team lead
+	backend team lead --> if backend  work, he will redirect to backend team lead
+UI team --> group
+--------
+3 members
+
+HR --> HR should continously check if the resources
+overload --> have to take another resource
+less work --> have to terminate
+if they resign --> they have to replace
+
+Team Manager --> APP ALB
+Team Manager Listens --> listens to only business analyst, port no 80. no encryption required.
+Rules
+	if UI --> UI team
+	if Backend --> Backend team
+	
+HR --> autoscaling
+Team/Groups --> target groups
+employees --> instances
+hiring template --> launch template
+
+context path
+daws76s.online/roboshop
+daws76s.online/amazon
+
+host path
+roboshop.daws76s.online 
+amazon.daws76s.online
+
+*.app-dev.daws76s.online
+
+team create --> 
+
+create catalogue target group
+
+HR --> Autoscaling
+
+create one instance
+provision with ansible/shell
+stop the instance
+take AMI
+delete the instance
+now create launch template with AMI
+
+
+roboshop-dev-catalogue-YYYY-MM-DD-hh-mm
+
+catalogue.app-dev.daws76s.online --> redirect to catalogue target group
