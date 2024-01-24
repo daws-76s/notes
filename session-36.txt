@@ -1,0 +1,60 @@
+catalogue deploy
+
+new version of catalogue should be released, new launch template version also should be released....
+
+autoscaling is refreshed using new launch template
+
+autoscaling provision ec2 instances into a target group directly
+
+RollingUpdate
+--------------
+4 instances are there now, 4 new instances should be created and replace old
+
+1 new instance --> once it is up, 1 old instance will be terminated
+2 new instance --> once it is up 2nd old instance will be terminated
+
+target group
+instance launch
+provision
+stop
+ami
+delete instance
+launch template
+autoscaling --> target group
+
+LB --> listener and rules
+
+*.app-dev.daws76s.online --> APP ALB
+catalogue.app-dev.daws76s.online --> catalogue target group
+
+
+http://catalogue.app-dev.daws76s.online/categories
+
+*.app-dev.daws76s.online --> internal-roboshop-dev-app-alb-1986419658.us-east-1.elb.amazonaws.com.
+
+instance-1 --> handling some requests
+
+instance-1 got termination request, dereigstration will start
+
+complete pending requests and loadbalancer should not give any new requests
+
+WEB
+--------------
+1. web alb, create security group first. listener 443. rule
+web-dev.daws76s.online
+
+before creating listener you need to create certificate. https
+
+*.daws76s.online --> create https certificate
+
+2. 443 give access from internet
+
+
+godaddy
+---------
+login to godaddy account, create records there...
+
+How HTTPS works?
+
+ACM
+CDN

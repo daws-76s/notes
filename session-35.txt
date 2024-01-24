@@ -1,0 +1,33 @@
+vpc
+
+push
+----------
+ansible --> nodes
+
+manual login, they disturb configuration
+
+ansible-pull --> every 30min download the configuration from git directly and run it, anyhow we implemented idempotency so no problem
+
+every platform will have its own solution to maintain configuration and secrets
+
+SSM paramter store --> services will refer this..
+
+server provisioning is through ansible, so it is ansible responsibility to get the configuration from paramter store
+
+ansible --> AWS paramter store
+
+ansible use boto3 and botocore python modules to connect
+
+
+app and web tier
+--------------------
+1. if traffic increases, autoscaling will create instance
+	1. when new instance created, use user_data or provisioner with ansible to configure the server --> 5min
+	2. when you are deploying, website is running
+		a. first we create one new instance
+		b. provision the instance using ansible
+		c. stop the instance
+		d. take AMI --> 10min
+		e. update autoscaling using new AMI
+			slowly old instances will be replaced by new instances
+			in future if traffic increases, autoscaling uses AMI to add the instances
