@@ -1,0 +1,33 @@
+app_alb_web
+
+source: web_sg_id
+ingress rule: 80
+
+web-dev
+
+https://web-dev.daws76s.online
+
+1. web ALB roboshop-dev-web-alb-1134442274.us-east-1.elb.amazonaws.com.
+2. 443 listener will invoke
+3. rules will evaluate and traffic will be redirected to web tg
+4. traffic reaches web and give us the website
+
+https://web-dev.daws76s.online/api/catalogue/categories
+
+1. web ALB roboshop-dev-web-alb-1134442274.us-east-1.elb.amazonaws.com.
+2. 443 listener will invoke
+3. rules will evaluate and traffic will be redirected to web tg
+4. traffic reaches web and give us the website
+5. api/catalogue/* --> catalogue.app-dev.daws76s.online
+
+http://catalogue.app-dev.daws76s.online
+1. APP ALB
+2. 80 listener will invoke
+3. rules will evaluate and traffic will be redirected to catalogue tg
+4. it will connect to and fetch products
+
+Cloudfront
+---------------------------
+ISP also cache servers, they download movies in cache servers
+
+cdn --> get it from web alb(origin)
