@@ -1,0 +1,40 @@
+merge conflicts
+
+what is conflict?
+
+if git finds diff code in the same line number
+
+main
+------
+main --> conflict --> developer-1 created it
+
+developer-2
+-----------------
+main --> developer-2
+then he should understand main branch moved forward
+
+he need to pull those changes in local, resolve conflicts with other developer-1
+
+pull before push 
+
+Jenkins --> CICD
+---------------
+continous integration tool
+
+
+1 person --> 1 acre of agriculture
+
+100 acres --> you need lot of resources
+
+owner --> employ resources --> distribute the work
+
+master --> slave
+master --> agent
+1. master asking agent to work
+2. employee coming to master and asking for work
+
+webhook
+-----------
+if developer pushes the code to git, then we want the pipeline to run automatically
+
+git --> Jenkins

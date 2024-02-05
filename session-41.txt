@@ -1,0 +1,97 @@
+master --> feature
+PR from feature --> master
+comments
+merge/rebase --> extra commit
+merge commit triggers DEV deployment
+
+
+main
+feature branches are from main branch
+we did PR
+
+git content tracker
+
+SHA code --> 40 char universal unique ID for the content
+
+git is a key/value pair
+
+commit ID --> content is the value
+
+if you change the content commit ID will change
+
+echo "" | git hash-object --stdin
+
+git cat-file commit-id -p --> you will get total information
+
+merge strategies
+-----------------
+
+1. merge
+-------------
+when you are merging one branch to another branch
+feature-1 --> main
+it will create a merge commit always that have 2 parents.
+merge will preserve the complete history, it is like chain structure
+
+2. rebase
+-------------
+1. no extra commit
+2. commit ids will change, rewrites the history
+3. it will not preserve the history.
+
+a. is this looking like a rebase is created and merged
+b. is this looking a linear development happened in main branch
+
+squash --> mixing them
+
+microservices
+------------
+2 weeks
+1 feature is developed by 1 developer
+
+a developer can do 60 commits...
+
+abcd433 --> project-1 have user module
+60 commits --> squash into single commit
+djf788 --> He completed catalogue module
+dfg67364 --> cart module
+
+1. if a branch is developed by multiple developers then
+	prefer merge
+	
+branching strategy
+---------------------
+main
+feature --> apart from main anything called as feature branch
+
+main is long lived branch, feature is short lived branch
+
+developers create feature branches, once they complete development they will raise PR and merge/rebase into main branch
+
+
+feature branch, before raising PR... let's do CICD in DEV environment. if success in DEV then you can raise PR
+
+then rebase into main...
+
+code is same across all environments, but configuration is different
+configuration should be detached from code, we are using SSM parameter store
+
+we got into main branch --> QA, SIT, UAT, PRE-PROD, PERF, PROD
+
+feature --> DEV, QA --> success
+main --> merge --> new commit ID got created
+when commit id is changed --> code is changed --> so doing once again in QA
+
+fast-forward merge --> build once in DEV and run anywhere
+-------------------
+feature --> DEV, QA --> success
+main --> but same commit ID whatever tested in feature branch
+
+
+
+
+
+
+
+
+

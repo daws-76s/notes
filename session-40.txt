@@ -1,0 +1,120 @@
+Cloudfront
+-------------
+useful to cache static content
+dynamic content should not be cachced
+
+https://web-dev.daws76s.online/media/graph.png
+https://web-dev.daws76s.online/media/instana_icon_square.png
+https://web-dev.daws76s.online/images/STAN-1.jpg
+https://web-dev.daws76s.online/media/instana_icon_square.png
+
+/images/* --> then apply cache policy
+/media/* --> then apply cache policy
+default --> get the content from web-dev.daws76s.online
+
+deployment
+------------
+changed some content
+
+remove cache from all edge locations
+cloudfront will get latest again and cache it
+
+https://web-cdn.daws76s.online
+
+1. get the cdn url from route53
+2. behaviours will be evaluated
+
+https://web-cdn.daws76s.online/api/catalogue/categories --> web-alb
+
+web-dev.daws76s.online/api/catalogue/categories
+
+listeners and rules in web alb
+
+443, web-dev --> web
+/api/catalogue/* --> catalogue.app-dev.daws76s.online --> APP ALB
+
+80 catalogue. --> catalogue component
+
+/categories --> connect to mongodb and fetch the categories
+
+
+SG
+----
+VPC based service, where resource is created inside VPC
+non VPC service, resources are created outside VPC
+
+1. CDN --> WEB ALB
+web alb should accept traffic on 443 from internet.
+2. Web ALB --> WEB
+WEB should accept traffic on 80 from web-alb
+3. web-alb --> app-alb
+app-alb should accept traffic on 80 from web and vpn
+4. app-alb --> catalogue
+catalogue should accept traffic on 8080 from app-alb
+5. app-alb --> cart
+cart should accept traffic on 8080 from app-alb
+cart --> catalogue through app-alb
+app-alb should accept traffic on 80 from cart
+all components are accepting traffic on port no 80 from app-alb
+6. mongodb should accept traffic on 27017 from catalogue
+
+
+vpc, sg, vpn, databases, web-alb, app-alb --> 
+
+project infra --> we need project infra to create applications
+through SSM parameter store
+
+catalogue
+--------------
+CICD
+
+CI
+----
+clone
+build
+scan the code
+	static scanning --> sonarqube
+	sast --> fortify, coding is based on security standards
+	dast --> web inspect, app will be tested with all vulnerabilities
+	open source scan --> nexus IQ, blackduck scan thrird party libraries
+	image scanning --> ECR scanning,  scanning docker images
+create artifact, generally zip file
+store the zip file --> nexus, jfrog, s3
+unit testing --> junit
+
+CD
+----
+application infra --> developers or devops engineers
+-----------------
+create instance
+deploy the latest version
+stop the instance
+take ami
+refresh autoscaling
+do the functional testing --> selenium
+
+shift-left
+------------
+
+
+GIT
+--------------
+main/master --> depicts/points the code running currently in production
+
+create a copy of file --> do the changes --> test those changes --> then do it main file
+
+create another branch from main/master
+--------------------------------------
+do the changes here
+run CICD --> deploy in DEV
+test the application
+merge into master --> deploy in PROD
+
+we write functions --> functionality
+input and output
+
+code coverage --> how much unit testing covered
+
+
+
+

@@ -1,0 +1,29 @@
+1.0.0 --> semantic version
+
+http://3.237.181.150:8081/repository/catalogue/
+http://172.31.5.95/repository/catalogue/com/roboshop/catalogue/1.0.0/catalogue-1.0.0.zip
+
+jenkins --> nexus
+
+nexus artifact uploader
+
+nexus URL, authentication
+
+create a server
+provision it using ansible
+stop server
+take AMI
+create launch template version
+refresh autoscaling
+
+download artifact from nexus
+download specific version
+
+ansible
+--------
+nexus location
+artifact version
+
+from terraform you should send artifact version to ansible
+
+jenkins have application version, it should send that version to terraform

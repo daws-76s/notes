@@ -1,0 +1,54 @@
+Types of scanning
+
+Static source code analysis
+	sonarqube
+Static application security testing
+	fortify
+dynamic application security testing
+	web inspect
+open source library scanning
+	nexus iq
+docker image scanning
+	twistlock, ECR scanning
+	
+dependencies installatio
+build
+all type of scanning
+unit testing
+nexus upload
+
+quality gate
+-------------
+0 bugs
+0 code snells
+security rating A
+code coverage 80
+commit-A
+commit-B
+
+commit-B - commit-A = new code
+
+git --> multiple branches...multi branch pipeline
+
+Language, Deployment platform
+NodeJs, AWS VM/Docker/Kubernetes/PCF/On-prem VM
+
+HDFC --> 200 projects and many microservices
+
+nodejsvm pipeline --> don't duplicate the pipeline code
+
+reuse, implement best standards and force others to use
+nodejsvm pipeline --> implement best standards, reuse, centralised
+
+jenkins shared library --> treat your pipeline as library, use it wherever you want
+
+process
+-----------
+1. create a feature branch in catalogue
+2. configure multi branch pipeline
+3. configure jenkins shared library
+
+1. I created a repo and added pipelines there
+2. I added in jenkins system configuration, location and name of the library
+
+nodejsvm/javavm/pythonvm/govm is a centralised pipeline, we need to send parameters

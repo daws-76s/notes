@@ -1,0 +1,53 @@
+agent
+-------
+terraform command
+should have aws creds also
+
+CICD
+-------
+Project infra should be ready
+
+catalogue app should be in git
+Jenkinsfile
+
+CI
+-----
+clone the code
+unit testing
+scans
+	sonar scan
+	SAST
+	DAST
+	Open source scanning
+	docker image scanning
+dependencies install
+build --> zip file
+we need to push to Nexus
+
+CD
+----
+deploy to dev
+functional test cases
+publish the results
+
+git --> repository --> code --> dont store artifacts
+nexus --> repository --> artifacts --> dont store code here
+
+maven 2 format
+--------------
+1000
+	firstname
+	firstname+lastname --> same
+	firstname+lastname+dob --> may be possible
+	
+project, modules, versions
+
+project --> roboshop
+modules --> catalogue
+version --> 1.0.0, 1.0.1, 2.0.0
+
+group id --> com.roboshop
+artifact id --> catalogue
+version --> 10.0.0
+
+http://100.26.147.241:8081/repository/catalogue/
