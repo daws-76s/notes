@@ -1,0 +1,40 @@
+JIRA/Service now
+---------------------------
+project code, app code, version
+test results attachement
+scanning results attachement
+DEV, SIT, UAT --> success
+jenkins build URLS also here
+
+JIRA ID
+CR number
+
+Change management process
+---------------------------
+we will raise a CR --> every organisation will have their own tool to manage CR.
+
+project code, application code, version, JIRA ID, approvals, date and time, deployment process, revert back process, post deployment testing.
+
+NEW --> CR ID
+Approve --> write some comments
+Delivery manager --> write some comments and approve
+Cleint --> approve
+
+JIRA --> Jenkins integration
+
+trigger PROD --> JIRA will check CR is approved or not, prod trigger time is same as time in CR.
+
+Jenkins pipeline
+
+DEV and PROD infra
+
+DEV will do a change in source code, a pipeline will automatically trigger to deploy the application into DEV..
+
+then we will deploy into PROD
+
+functional testing
+------------------
+microservices
+1 microservice is handled by 1 person --> Developers are writing functional test cases
+
+Once DEV deployment is over, either developer/tester have to provide the scripts and command to perform functional testing,
