@@ -1,0 +1,145 @@
+Linux
+Manual project installation
+Shell script
+Ansible script
+Terraform
+Terraform infra + Jenkins CICD
+
+Containerization
+
+Physical Servers, Virtualisation, Containerization
+
+Independent houses, apartments, individual rooms
+
+Independent houses/Physical Servers
+-------------------
+advantages:
+* own space, privacy
+
+dis advantages:
+* electricity
+* water
+* internet
+* 6months - 1year time
+* only one family can stay
+* cost is very high
+
+Physical Servers --> booting time is very high
+16GB RAM, 1TB HD
+
+apartments/Virtualisation
+-------------------
+dis advantages:
+* shared area(corridor, park, lift, badminton court, pool, etc.)
+
+advantages:
+* water, electricity, internet everything will be taken care
+* construction time is relatively very less
+* cost is medium
+
+booting time is very less compared to physical server
+
+a big physical server will be there --> 16GB RAM, 1TB HD, CPU
+we will divide this big server into multiple logical servers
+Host OS --> windows
+VM Ware --> Hypervisor
+
+Guest OS-1
+--------
+1GB RAM
+Ubuntu
+100GB HD
+
+Guest OS-2
+--------
+1GB RAM
+Centos
+100GB HD
+isolated from other servers
+
+Guest OS-3
+--------
+1GB RAM
+Fedora
+100GB HD
+0.1GB RAM, 10GB HD
+
+
+resource utilisation is good in VM
+
+single rooms
+------------------
+1 flat --> 3BHK
+everyone will take one room, hall and kitchen are shared
+
+advantages:
+* very fast
+* very less cost
+
+we will have containers installed in VM...
+
+containers are isolated from each other, system resources are shared...
+containers take resources based on demand, it don't block resources
+boot time is very less --> with in seconds your application is available
+
+configuration == all your things
+
+container/image = Fat OS(4GB/3GB) + application run time + created users + created a directory + installed application
+
+AMI = server + configured the server using ansible + stop server + take AMI
+Amazon machine image
+
+docker image = Base OS(5MB-250MB) + application run time + created users + created a directory + installed application = max 500MB = immutable image = can take from DEV to PROD
+
+Docker is portable
+
+legacy = frontend+backend ==> war file and ear file = 100MB
+
+frontend and backend divided
+
+VM for monolithic apps
+
+frontend = UI = VM-1 = 50 MB
+backend = cart+catalogue+user = VM-2 = 50MB
+
+Microservices --> completely independent applications
+10/5MB you dont need VM to run a microservice. containers are a best approach
+
+working in DEV, but not working in PROD
+----------------------------------------
+configuration changes and OS
+
+docker users can only use docker, when you install docker a group called "docker" is created
+
+usermod -aG docker centos
+image vs container
+AMI vs EC2 instance
+
+docker images --> show you the images exist in server
+docker pull nginx --> pulls the image from hub
+docker pull nginx --> pulls the image from hub
+nginx AMI = any OS + install nginx = nginx AMI
+nginx image = base os + nginx installed
+docker create <image ID>/<image-name>:version --> container will be created
+
+docker ps --> running containers
+docker ps -a --> all containers with all status
+
+docker start container id --> start the container
+
+docker rm container id
+remove images --> docker rmi <image-name>/id
+docker rmi `docker images -a -q` --> removes all images
+
+pull+create+start = docker run
+
+docker run -d --> to run container in background
+docker exec -it conatainer id bash
+
+0-65,535 ports
+0-65,535 a container will have
+
+Dockerfiles
+------------
+a declarative way of creating our own image...
+

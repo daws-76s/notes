@@ -1,0 +1,26 @@
+1. make sure dev and prod infra is ready. get the vpn connected
+2. catalogue
+	create catalogue repo
+	create jenkinsfile
+	point this jenkinsfile to shared libraries. make sure you have shared libraries configured in jenkins system configuration
+	shared library VM pipeline will be called
+		clone
+		get the version from package.json
+		install dependencies
+		unit tests
+		build
+		scans
+			sonar
+			sast
+			open source libraries scans
+			dast
+		if developer opts for deploy we can deploy
+	catalogue-deploy, it is calling terraform-roboshop-app
+	bootstrap script, we are passing environment, version and component
+	bootstrap script will clone roboshop-ansible-roles-tf and run catalogue role
+	
+As a DevOps team, we have Nodejs CICD ready... a new project user module is started. How can you setup CICD for it?
+
+1. if a new project is started, they should have a repo exist in nexus..
+2. 
+	
