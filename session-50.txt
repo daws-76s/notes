@@ -1,0 +1,64 @@
+docker build -t url/username/image:version .
+
+docker build image:version .
+
+docker tag image:version url/username/image:version
+
+docker login
+
+docker push image:version url/username/image:version
+
+RUN vs CMD
+---------------
+systemctl start catalogue
+
+it will create one nodejs process and this process will run for infinte time...
+
+CMD instruction is to make your container running..
+
+RUN --> runs at the time of image building
+CMD --> runs at the time container creation
+
+every container is a process.
+
+systemctl commands will not work in containers...
+
+command should be foreground and attach to the screen, then you send it into background
+
+100 shopping covers all are white, you know only when you open them
+
+you can give some lables to them to identify easily
+
+COPY vs ADD
+--------------
+both are used to copy the files from local to image... but ADD have 2 extra capabilities
+
+1. It can directly download files from internet
+2. It can directly untar the tar files..
+
+CMD vs ENTRYPOINT
+-----------------
+1. CMD command can be overridden by another command at run time.
+ping google.com ping yahoo.com
+2. ENTRYPOINT command can't be overridden, if you try to do so, the command you are entering at run time will go and append to ENTRYPOINT
+
+We can use CMD and ENTRYPOINT for best results
+
+1. You can use CMD instruction to supply default arguements to ENTRYPOINT
+2. user can always override CMD arguements from run time
+
+ARG vs ENV
+-----------------
+ARG instruction can provide values to the Dockerfile only at buildtime. ENV variables have access in the container
+
+How can I use ARG variables inside container?
+Assign the values of ARG to ENV variables so that you can access them inside container as well
+
+ARG instruction can be used before FROM instruction to provide values to FROM instruction.
+
+ARG value deffnied before FROM will not be accessed after FROM
+
+ONBUILD
+-----------------
+author of image: I want to force users of image to follow something
+
