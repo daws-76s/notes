@@ -1,0 +1,87 @@
+docker commands
+dockerfile instructions
+docker compose
+
+docker network create roboshop
+
+once the images are ready, we can run docker compose
+
+we took one OS
+	application run time, nodejs
+	user create
+	create folder
+	download application
+	systemctl
+AMI
+
+best practices
+--------------
+1. use official images
+2. reduce image size by using bare minimum OS like alpine, disto, core os, etc.
+3. use multi stage builds
+4. use docker volumes to persist the data
+5. use custom network to isolate containers from other projects
+
+Source code --> compile --> byte code(jar) --> run byte code
+
+JDK --> Java development kit
+JRE --> Java runtime environment
+
+JDK > JRE and JRE is subset of JDK
+
+JDK memory > JRE memory
+
+
+Docker Volumes
+---------------
+when you remove docker container, what happens to data?
+
+containers ephemeral/temporary. data by default will be deleted..
+
+unnamed volumes
+named volumes
+
+-p host-port:container-port
+
+/opt/server --> node js file
+
+roboshop:roboshop
+
+addgroup 
+
+docker architecture
+
+docker run nginx
+	1. docker shell/ docker command send a request to docker deamon
+	2. docker engine receives the request
+	3. it will check whether image is available in local or not
+	4. if available it will create container and show the response in client
+	5. if not available, it will pul from docker central hub, keep it in local.
+	6. create container and response to client
+
+docker layers
+--------------------
+1. base image
+
+creates container out of first instruction, intermediate container
+
+2. runs second instruction in the container, creates image out of this
+
+3. creates container out of 2 instructions.
+
+4. runs the command in the intermediate container. creates image out of these 3
+
+FROM node:18.19.1-alpine3.19 --> creates container-1 here
+runs EXPOSE 8080 in container-1 --> creates image-1 out of this container-1
+create container-2 out of image-1
+runs this command addgroup -S roboshop && adduser -S roboshop -G roboshop in container-2 --> creates image-2 out of this conatiner-2
+creates container-3 out of this image-2
+RUNS 
+
+image --> container --> image --> container
+
+RUN yum install nginx -y
+RUN yum install git -y
+RUN yum install gcc -y
+
+
