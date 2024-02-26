@@ -1,0 +1,74 @@
+spot
+-------
+on demand instances
+
+10000 CPU, 100000 TB HD
+
+8000 CPU, 8000 TB 
+
+2000CPU, 2000TB
+
+spot instances --> 70% discount of normal
+2minutes notice, they will take back instances
+
+
+resources in pod
+---------------------
+VM vs containerisation
+
+VM --> 2GB 2CPU --> resources are blocked irrespective of usage
+containerisation --> containers don't block resources, they are used dynamically
+
+1 VM --> roboshop containers/pods, amazon containers/pods
+
+traffic increased/code caused more resources to consume
+
+VM will be blocked by a single container
+
+we can restrict the resources consumed by containers...
+
+1000m = 1cpu
+250m = 0.25cpu
+
+Where to store configuration?
+
+AWS --> 
+
+Services
+---------------
+if you want to expose pods to other applications or outside we must use services..
+
+1. expose to other apps or outside world
+2. load balancing
+3. service mesh
+
+1. Cluster IP --> purely internal to kubernets
+2. NodePort --> you can expose to outside world
+3. LoadBalancer --> you can expose to outside world
+
+Project: roboshop
+Component: catalogue
+Tier: tier-2
+
+what if we want multiple pods?
+
+ReplicaSet
+
+nginx-rs-<random-id>
+
+catalogue:1.0.0
+
+catalogue:1.2.0
+
+cluster-ip < node-port < load-balancer
+
+pod < replicaset < deployment
+
+nginx-deployment-5ff5b64b7d-88jcc
+
+nginx-deployment-5ff5b64b7d --> rs
+
+nginx-deployment-5c9bf7649d --> new rs
+
+
+

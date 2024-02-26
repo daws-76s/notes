@@ -1,0 +1,47 @@
+apiVersion:
+kind:
+metadata:
+	name:
+	labels:
+spec:
+
+namespaces
+pods
+configmap
+secret
+services
+	clusterIP
+	nodePort
+	LoadBalancer
+Sets
+	ReplicaSet
+	Deployment
+	
+1. image should exist, building the image
+2. configuring image through manifest yamls
+
+url/username/image:version
+
+joindevops/mongodb:v1
+
+Pod vs ReplicaSet vs Deployment
+
+3 nodes
+-----------
+pod is in running...
+we will rebuild the image and push to docker hub as same version
+
+run manifest again --> 
+
+ENV we pass it from kubernetes as configmap
+
+Request
+---------
+catalogue-pod --> catalouge node --> mongodb service --> mongodb node --> mongodb pod
+
+we can keep this roboshop configuration also in configmap
+
+
+location /api/catalogue/ {
+        proxy_pass http://catalogue:8080/;
+    }
