@@ -1,0 +1,88 @@
+Kubernetes
+
+Pods
+Services
+Sets
+	ReplicaSet
+	DeploymentSet
+ConfigMaps
+Secrets
+
+roboshop
+
+1. Building the image
+2. Running/Configuring the image using k8
+
+ENV CART_ENDPOINT=cart:8080
+ENV DB_HOST=mysql
+
+ENV MYSQL_ROOT_PASSWORD=RoboShop@1 \
+    MYSQL_DATABASE=cities \
+    MYSQL_USER=shipping \
+    MYSQL_PASSWORD=RoboShop@1
+
+ENV AMQP_USER=roboshop \
+    AMQP_PASS=roboshop123
+	
+stateful vs stateless
+-----------------------
+storage
+	CRUD --> create data, read the data, update data, delete data..
+	file
+	excel
+	logs
+	RDBMS
+	NoSQL
+
+stateful applications --> doing operations on the data directly.
+
+catalogue cart user shipping payment web --> no own database, apps are not storing anything
+stateless Applications
+
+we can immidiately restore, no business impact..
+
+data is getting stored in EC2 worker nodes..
+
+pods are ephemeral, nodes are also ephemeral.
+
+storage or k8 volumes
+-----------
+stores data in worker nodes, internal volumes
+1. emptyDir
+	used for sidecar patterns, we mount the volume to sidecar and main container using emptyDir. then sidecar get access to storage
+	
+	filebeat --> public image from elasticsearch
+
+there is some configuration for filebeat
+1. i/p and o/p --> i/p is what logs to access, o/p is where to ship the logs
+
+2. hostPath --> we need to ship all the worker node logs to external system. 
+
+DeamonSet --> will make sure a pod runs in each and every node.. fluentd will be deployed as deamonset that can access the underlying host logs and send them to ELK
+
+/var/log directory and ship it...
+
+external volumes
+---------------
+1. static provisioning
+2. dynamic provisioning
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
