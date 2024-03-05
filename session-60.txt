@@ -1,0 +1,74 @@
+1. EBS drivers
+add helm repo --> kubernetes resource files
+helm repo add aws-ebs-csi-driver https://kubernetes-sigs.github.io/aws-ebs-csi-driver
+helm repo update
+helm upgrade --install aws-ebs-csi-driver --namespace kube-system aws-ebs-csi-driver/aws-ebs-csi-driver
+2. Ec2 role access
+3. install storage class
+
+RBAC
+-------------
+eks-admin team..
+we are devops engineers for roboshop project, we will get access to roboshop namespace..
+
+team leader/members email to eks-admin team. about a namespace. admin team will get approvals from their manager and roboshop manager..
+
+then they create roboshop namespace...
+
+namespace level
+---------------
+Role
+RoleBinding
+
+ClusterLevel
+--------------
+ClusterRole
+ClusterRoleBinding
+
+1. trainees --> read-only
+2. engineers --> limited write access
+3. team leader --> namespace admin
+
+1. authentication
+2. authorization
+
+EKS will use IAM for authentication...authorization should be from EKS
+
+ramesh --> he should describe our eks cluster...
+
+
+1. create IAM user
+2. give him policy of cluster describe. this is the least access he should have
+3. ramesh --> trainee
+create role and rolebindings
+4. how EKS will understand or integrate with IAM?
+
+HPA
+--------
+Autoscaling --> Avg CPU utilisation, if crosses 75% then VM are getting increased.
+
+conditions
+1. metrics server. it measures pod resources dynamically.
+2. your deployment should have resources implemented, 
+
+2 pods, 
+
+100 -> max age
+20, 30, 
+
+100m
+5m
+
+5/100
+
+kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://a6aaa5130728f498abd1bb8d8f685c86-1025040175.us-east-1.elb.amazonaws.com; done"
+
+kubectl get pods
+
+1. get the user credentials from aws configure
+2. send these credentials to AWS IAM, success if credentials are correct
+authentication is done
+3. a request is sent to EKS
+4. EKS check this user ramesh have role and rolebindings
+5. he have get pods access so it will send response.
+

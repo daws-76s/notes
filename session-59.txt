@@ -1,0 +1,36 @@
+Helm Charts
+-------------------
+1. templatise the kubernetes manifests
+2. package manager for kubernetes
+
+1. build the image or pull the image if it is public
+2. configure image through manifest files to run pods
+
+yum install nginx -y
+
+yum is getting the package from internet and installing it in VM...
+
+1. image is already in public
+2. helm have some public repos to configure the image through manifest files...
+
+EBS drivers
+
+1. add helm repo --> kubernetes resource files
+helm repo add aws-ebs-csi-driver https://kubernetes-sigs.github.io/aws-ebs-csi-driver
+2. helm repo update
+3. helm upgrade --install aws-ebs-csi-driver --namespace kube-system aws-ebs-csi-driver/aws-ebs-csi-driver
+helm install nginx .
+
+statefulset --> used to create stateful applications in kubernetes
+deployment --> used to create stateless applications in kubernetes
+
+nodes inside stateful applications should have static hostnames to communicate with other nodes
+stateful applications should follow orderly provisioning as well as terminaete
+statefulset applications will have headless service...
+
+
+1. install drivers
+2. provide IAM role access to ec2
+3. install storage class
+
+

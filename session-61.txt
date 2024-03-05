@@ -1,0 +1,70 @@
+1. EBS drivers
+
+Horizontal scaling vs Vertical scaling
+-------------------------------------
+server
+	CPU
+	RAM
+	HD
+add more CPU, RAM and HD
+
+horizontal scaling
+add more servers
+CPU utilisation
+
+1. metrics server
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+2. deployment should have resources mentioned
+
+Ingress Controller
+-------------------
+EKS - PaaS
+roboshop, amazon, flipkart
+
+ALB is preferred
+
+context path
+------------
+app-dev.daws76s.online/catalogue --> go to catalogue target group
+app-dev.daws76s.online/user --> go to user target group
+
+host path
+------------
+catalogue.app-dev.daws76s.online --> go to catalouge target group
+user.app-dev.daws76s.online --> go to catalouge target group
+
+ingress
+---------
+app1.daws76s.online --> Ingress Controller --> ingress --> app1 service --> app1 pod
+
+EKS should have capability of creating load balancers, target groups, listeners, rules
+
+Install Ingress Controller
+---------------------------
+https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.7/
+
+give ec2 full access to nodes
+
+eksctl utils associate-iam-oidc-provider \
+    --region us-east-1 \
+    --cluster roboshop \
+    --approve
+	
+curl -o iam-policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.7.0/docs/install/iam_policy.json
+
+aws iam create-policy \
+    --policy-name AWSLoadBalancerControllerIAMPolicy \
+    --policy-document file://iam-policy.json
+	
+eksctl create iamserviceaccount \
+--cluster=roboshop \
+--namespace=kube-system \
+--name=aws-load-balancer-controller \
+--attach-policy-arn=arn:aws:iam::315069654700:policy/AWSLoadBalancerControllerIAMPolicy \
+--override-existing-serviceaccounts \
+--region us-east-1 \
+--approve
+
+helm repo add eks https://aws.github.io/eks-charts
+
+helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n kube-system --set clusterName=roboshop --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller
