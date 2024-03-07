@@ -1,0 +1,90 @@
+taints and tolerations
+affinity and anti affinity
+
+architecture
+--------------
+incoming requests to the system
+outgoing requests from the system
+
+master node --> control plane in EKS
+nodes
+
+kubectl --> command line to connect k8 cluster
+
+kube-apiserver 
+---------------
+--> responds to kubectl commands. kube-apiserver generally validates authentication and authorization.
+
+getting info is done kube-apiserver. creating resources kube-apiserver will handle that request to scheduler
+
+kube-scheduler
+---------------
+it will decide which node to create the pod. based on few factors. it will take few considerations based on node labels and node selectors, taints and tolerations, affinity and anti affinity.
+
+etcd
+--------------
+entire data corresponds to our cluster. generally this will be managed as EBS out of EKS.
+
+kube-controller-manager
+---------------
+node control --> Responsible for noticing and responding when nodes go down.
+Job controller --> controlls the jobs. create pods, once pod complete their task job controller will mark it as completed.
+replication controller --> it makes sure requested number of replicas are always running.
+EndpointSlice controller --> makes sure the endpoints are created for services.
+
+node components
+---------------
+kubelet --> component that makes sure nodes are connected to control plane.
+
+kube-proxy
+---------------
+responsible to forward the requests from services to pods.
+
+Container runtime
+---------------
+a runtime that can run any images to containers.
+
+
+eks upgrade
+----------------
+4 pods are running, need to upgrade
+
+1 new pod will come to running stage, 1 old pod will be terminated
+2nd new pod will come to running stage, 2nd old pod terminate.
+
+4 current pods are running, 4 new set pods will run..
+
+we will test current version, if everything is fine.. we will change the DNS records.
+
+target group --> old version
+another target group --> pointing to new version VM's
+
+we will update the rule, to send requests to new target group...
+
+blue --> running version
+green --> new version
+
+green will become blue if everything is good.
+
+EKS upgrade
+-----------------
+3 nodes --> 1.27
+
+upgrade master node --> you can't deploy new applications. but existing applications will run. we will announce downtime.
+
+we will create another node group --> 1.29 --> green
+
+we will slowly drain the nodes. for example old-node-1 is drained and other old nodes are tainted. then pods will automatically come up into new nodes...
+
+we will old node group...
+
+create new group called blue, then green will go down and blue will come up with pods..
+
+python and monitoring
+---------------------
+
+CICD with helm charts deployments
+
+
+
+
