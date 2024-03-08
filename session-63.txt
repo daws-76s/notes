@@ -1,0 +1,64 @@
+taints and tolerations
+
+taint = paint
+
+100 rs paint
+
+if I taint a node, then by default scheduler can't schedule pod on that node...
+
+few projects they add their own nodes to eks cluster. then they taint the nodes...
+
+tolerations is a excuse, pods specific to that project can have tolerations..
+
+taint
+------
+kubectl taint nodes ip-10-0-11-33.ec2.internal project=roboshop:NoSchedule
+
+
+affinitiy and anti affinitiy
+----------------------------
+1a node --> ebs also should be in 1a
+
+requiredDuringSchedulingIgnoredDuringExecution
+	schedule --> hard rule, while scheduling also labels should be matched
+	execute
+preferredDuringSchedulingIgnoredDuringExecution
+
+
+kubectl label nodes ip-10-0-11-33.ec2.internal project=roboshop
+
+kubectl label nodes ip-10-0-12-172.ec2.internal project=amazon
+
+pod1 is running, pod2 likes pod1. so pod2 wants to run where pod1 is running
+
+
+2 replicas, anti-affinity
+-----------------------------
+redis
+-----
+1st replica --> it will select node-1
+2nd replica --> it should not select node-1 because of anti-affinity
+
+web-store
+-----
+pod-1
+-----
+anti-affinity --> 1st pod will select any node i.e node-1.
+go and select where app:store is running
+
+pod-2
+------
+anti-affinity --> because of anti-affinity on replica-1, it goes to node-2
+
+you can announce no create/update of applications, no releases or changes
+------------------------------------------------------------------------
+blue --> green
+
+1. create a seperate node group called green
+2. we need to taint new nodes
+3. upgrade control plane to 1.28
+4. upgrade green node group to 1.28
+5. taint blue nodes so that new pods will not be scheduled
+	
+6. untaint green
+7. cordon/drain the blue nodes...
