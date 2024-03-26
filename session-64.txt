@@ -1,0 +1,109 @@
+CAT-1 --> end user applications --> banking
+CAT-2 --> end user applications --> extra requests from customers
+CAT-3 -->
+CAT-4 --> 
+
+Monitoring
+------------
+SRE --> Jenkins, Nexus, SonarQube, EKS, Ansible
+	Authentication
+	Authorization
+	Upgrades
+	Patches
+	Maintainance --> admin activities
+	Project creation
+	Traffic
+	Monitoring --> tool/website should be running 24*7 with low latency
+
+Black Box --> closed, we don't know internal details of app/system
+White Box -> open. we know internal details of app/system
+
+normal facebook user --> black box
+-------------------
+1. is facebook running or not?
+2. login is working or not
+3. input validations
+4. functionality testing
+
+white box --> you should know internal details
+-------------------
+1. all fb servers are up and running
+2. CPU, memory, disk, i/o
+3. log errors
+4. latency b/w internal components
+
+Alert --> that is an incident
+
+investigate the incident
+
+find why, implement solution, prepare root cause
+
+Latency --> Low latency
+Traffic --> measure traffic everytime
+Errors --> Log errors, application errors 5**
+Saturation --> CPU, Memory, Disk
+10
+20
+30
+40
+
+time series database
+---------------------
+11-MAR --> 1000 --> food 200, travel 200, movies 200
+12-MAR --> 900
+
+weekly expenditure
+monthly expenditure
+quarterly expenditure
+yearly expenditure
+max expenditure
+min expenditure
+avg expenditure
+
+applications
+-------------------
+timestamp --> cpu 50
+			  cpu 52
+			  cpu 45
+			  cpu 67
+
+Agent mechanism
+---------------
+CCTV Mechanism
+
+CCTV cameras --> data collectors
+Central Storage --> analyse
+
+periodic time intervals --> 1m, 2m, 5m, 1s, 10s, 15s
+
+
+[Unit]
+Description=prometheus service.
+
+[Service]
+ExecStart=/opt/prometheus/prometheus --config.file=/opt/prometheus/prometheus.yml
+
+[Install]
+WantedBy=multi-user.target
+
+
+[Unit]
+Description=prometheus service.
+
+[Service]
+ExecStart=/opt/node_exporter/node_exporter
+
+[Install]
+WantedBy=multi-user.target
+
+1. node exporter is running continously and getting the metrics from its node
+
+grafana
+------------
+a nice graph tool, it can get data from multiple sources. prometheus is one of the source...
+
+dynamic scrapping
+-----------------
+in cloud and dynamic environments iP address are ephemeral.
+
+

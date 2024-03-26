@@ -1,0 +1,122 @@
+variables
+data types
+conditions
+loops
+functions
+
+1. development --> speed and memory
+2. scripting --> automation
+
+shell --> linux/unix servers --> native scripting
+andriod --> native android app --> java
+ios --> native ios app --> swift
+
+python --> OS module --> it can run commands and fetch the details
+
+OS module --> it should interact with shell to get the details..
+
+where python?
+
+can shell get the list of repos from GitHub?
+	yes, shell is little bit complex with commands
+
+CRUD --> create repo, read repo, update repo and delete repo
+
+console --> humans
+API --> Programs, application programming interface
+
+/orgs/{org}/repos --> /orgs/daws-76s/repo
+
+https://api.github.com/orgs/daws-76s/repo
+
+API Methods
+
+HTTP Methods
+-----------------
+GET --> Read information
+POST --> posting the information, create resources
+PUT --> update resources
+DELETE --> delete the resources
+
+Authentication --> API prefers tokens
+
+Project onboarding
+------------------
+new DevOps project is started
+	bitbucket/github
+		create organisation
+		create one sample repo
+	jenkins
+		create folder
+	jira
+		create project
+	sonarqube
+		create project
+	nexus
+		create repos
+	kubernetes
+		create namespace
+
+terraform is best
+	CRUD
+but if I want to fetch the data from AWS, terraform can't do it 100%. 
+
+API --> AWS API = Boto3
+
+java
+python
+ruby
+nodejs
+
+Python Cloud Usecases
+---------------------
+1. every system will have API
+2. you can do CRUD over API.
+3. prefer python for scripting
+
+Cost cutting
+---------------------
+stop DEV instance at 8PM, start DEV instances at 8AM
+12hr computation cost daily + 48hours in a week
+108 hours per week = 432 hours per month
+EC2
+RDS
+DocuementDB/MongoDB
+
+AWS Boto3
+
+1. describe instances --> list the instances
+2. check the instance is dev or not
+	tagging strategy
+		environment --> dev
+		auto_scheduler --> yes
+3. daily 8PM a script should run to off the instance. AWS will provision a server in the background, run the script and delete the server
+AWS will charge for the number of minutes you run the script.
+5S --> 5sec
+10 sec
+
+don't keep applications inside lambda --> cost will be more
+best --> keep automation scripts inside lambda
+
+4. daily 8AM a script should run to on the instance
+
+Lambda --> serverless
+2 times a script will run
+	1. create EC2, schedule the script inside EC2
+		OS upgrade
+		cost
+		monitor the server
+you don't take responsbility of server. AWS will take care of server in the background
+
+Docker is portable, it means we don't care underlying server or OS
+
+scheduler --> Eventbridge
+
+Role --> lambda to access describe instance, start and stop
+Lambda --> code
+Eventbridge rules
+	every weekday 8PM --> stop the instances --> ec2autostop
+	every weekday 8AM --> start the instances --> ec2autostart
+	
+elasticIP --> write a script daily, that check unused elastic ips for 1 month.
+unused volumes
